@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Hamburger from "../../assets/Hamburger_icon.svg.png";
+import Logo from "../../assets/PokeLab_Logo.png";
 import "./header.css";
 export const Header = () => {
   return (
     <>
       <section className="top-nav">
         <Link to="/">
-          <img className="logo" src={Hamburger} alt="logo" />
+          <img className="logo" src={Logo} alt="logo" />
         </Link>
         <input id="menu-toggle" type="checkbox" />
         <label className="menu-button-container" htmlFor="menu-toggle">

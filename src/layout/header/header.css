@@ -17,13 +17,13 @@
     padding: 0 0px;
   }
   .menu > li a{
-    color: black;
+    color: #EF9A0D;
     font-size: 25px;
     margin: 0 1rem;
     overflow: hidden;
   }
   .menu > li a:hover{
-    color: #B41B30 ;
+    color: #FE0000 ;
   }
   .menu-button-container {
     display: none;
@@ -81,7 +81,9 @@
     }
   }
   .logo {
-    height: 1rem;
+    height: 150px;
+    padding: 0;
+    margin: 10px 0 0 -20px;
   }
   #sygnature_logo{
     height: 45px;
