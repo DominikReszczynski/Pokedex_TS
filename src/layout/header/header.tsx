@@ -4,7 +4,7 @@ import Logo from "../../assets/PokeLab_Logo.png";
 import "./header.css";
 export const Header = () => {
   return (
-    <>
+    <header>
       <section className="top-nav">
         <Link to="/">
           <img className="logo" src={Logo} alt="logo" />
@@ -18,13 +18,13 @@ export const Header = () => {
             <Link to="/about">ABOUT</Link>
           </li>
           <li>
-            <Link to="game">GAMES</Link>
+            <Link to="/games">GAMES</Link>
           </li>
           <li>
-            <Link to="quiz">POKEDEX</Link>
+            <Link to="/pokedex">POKEDEX</Link>
           </li>
         </ul>
       </section>
-    </>
+    </header>
   );
 };

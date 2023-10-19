@@ -1,6 +1,6 @@
 :root {
   --main_orange_colour: #EF9A0D;
-  
+
   font-family: 'Righteous', serif;
   line-height: 1.5;
   font-weight: 400;
@@ -55,6 +55,7 @@ button:focus-visible {
 }
 
 .site_conteiner {
+  min-height: calc(100vw - 50px - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
