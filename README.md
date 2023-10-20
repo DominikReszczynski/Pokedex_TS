@@ -47,3 +47,7 @@ Start the server
 ## Tech Stack
 
 **Client:** TypeScript, React, Redux, SCSS
+
+## Authors
+
+- [@DominikReszczynski](https://github.com/DominikReszczynski)
