@@ -1,11 +1,14 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import "./pokedex.css";
 import axios from "axios";
+import grassIcone from "../../assets/Grass_icon_SwSh.png";
+import { OnePokemon } from "./onePokemon";
 export function Pokedex() {
   const [getPokemons, setPokemons] = useState([]);
   const [getIsLoading, setIsLoading] = useState(true);
   const [setError] = useState(null);
-  const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1015";
+  const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=10";
 
   const getTypeOfPokemon = (typeOfPokemon = []) => typeOfPokemon[0].type.name;
   const getIconTypeOfPokemon = (typeOfPokemon = []) =>
@@ -16,11 +19,7 @@ export function Pokedex() {
 
   const typesIcon = {
     grass: (
-      <img
-        alt="pokemon-type"
-        className="pokemon-type"
-        src="https://archives.bulbagarden.net/media/upload/a/a8/Grass_icon_SwSh.png"
-      ></img>
+      <img alt="pokemon-type" className="pokemon-type" src={grassIcone}></img>
     ),
     fire: (
       <img
@@ -142,8 +141,6 @@ export function Pokedex() {
       ></img>
     ),
   };
-
-  //nowy sposób obsługi promis (async, await)(fechowanie danych)
   useEffect(() => {
     axios
       .get(BASE_POKEMON_API_URL)
@@ -177,16 +174,11 @@ export function Pokedex() {
         {/* <p>{getError && getError}</p> */}
         <div className="container--grid-wrapper">
           {getPokemons.map((pokemon) => (
-            <>
-              <div key={pokemon.id} className={setCssClass(pokemon)}>
-                <div>{getIconTypeOfPokemon(pokemon?.types)} </div>
-                <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-                <h3>{pokemon?.name?.replace(/-.*/, "")}</h3>
-                <ul>
-                  <li>{pokemon.weight}</li>
-                </ul>
-              </div>
-            </>
+            <OnePokemon
+              pokemon={pokemon}
+              getIconTypeOfPokemon={getIconTypeOfPokemon}
+              setCssClass={setCssClass}
+            />
           ))}
         </div>
       </div>

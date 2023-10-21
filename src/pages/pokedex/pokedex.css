@@ -10,12 +10,16 @@
   .container--grid-tile {
     font-weight: bold;
     text-transform: capitalize; /*zamiana pierwszej litery na dużą */
+    min-width: 100px;
     border: 1px solid;
     padding: 8px;
     border-radius: 8px;
     flex: 0 0 calc((100% / 8)); /* - calc(8px * 2) / 3 */
     text-align: center;
     white-space: nowrap;
+  }
+  .pokemon_img{
+    width: 60px;
   }
   /*----------------------------------------------------------------*/
   .loader {

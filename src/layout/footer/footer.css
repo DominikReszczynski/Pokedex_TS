@@ -31,3 +31,8 @@ height: 50px;
     color: var(--main_orange_colour);
     cursor: default;
 }
+@media screen and (max-width: 600px){
+    .footer{
+        display: none;
+    }
+}
