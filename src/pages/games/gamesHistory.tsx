@@ -587,4 +587,351 @@ export const spinOffPuzzleGames = [
       pal: "June 15, 2001",
     },
   },
+  {
+    title: "Pokémon Trozei!",
+    systems: [{ releaseDate: "2005", system: "Nintendo DS" }],
+    regionRelease: {
+      japan: "October 20, 2005",
+      northAmerica: "March 6, 2006",
+      europe: "May 5, 2006",
+      australasia: "April 28, 2006",
+    },
+  },
+  {
+    title: "Pokémon Battle Trozei",
+    systems: [{ releaseDate: "2014", system: "Nintendo 3DS" }],
+    regionRelease: {
+      japan: "March 12, 2014",
+      europe: "March 13, 2014",
+      northAmerica: "March 20, 2014",
+      australasia: "March 14, 2014",
+    },
+  },
+  {
+    title: "Pokémon Shuffle",
+    systems: [
+      { releaseDate: "2015", system: "Nintendo 3DS" },
+      { releaseDate: "2015", system: "iOS" },
+      { releaseDate: "2015", system: "Android" },
+    ],
+    regionRelease: {
+      worldwide: "February 18, 2015",
+    },
+    notes: "Developed by Genius Sonority.",
+  },
+  {
+    title: "Pokémon Picross",
+    systems: [{ releaseDate: "2015", system: "Nintendo 3DS" }],
+    regionRelease: {
+      japan: "December 2, 2015",
+      northAmerica: "December 3, 2015",
+      europe: "December 3, 2015",
+      australasia: "December 4, 2015",
+    },
+    notes: "Developed by Jupiter Corporation.",
+  },
+  {
+    title: "Pokémon Café Mix",
+    systems: [
+      { releaseDate: "2020", system: "Nintendo Switch" },
+      { releaseDate: "2020", system: "Android" },
+      { releaseDate: "2020", system: "iOS" },
+    ],
+    regionRelease: {
+      worldwide: "June 23, 2020",
+    },
+  },
 ];
+
+export const spinOffPikachuGames = [
+  {
+    title: "Hey You, Pikachu!",
+    systems: [{ releaseDate: "1998", system: "Nintendo 64" }],
+    regionRelease: {
+      japan: "December 12, 1998",
+      northAmerica: "November 6, 2000",
+    },
+  },
+  {
+    title: "Pokémon Channel",
+    systems: [{ releaseDate: "2003", system: "GameCube" }],
+    regionRelease: {
+      japan: "July 18, 2003",
+      northAmerica: "December 1, 2003",
+      europe: "April 2, 2004",
+    },
+  },
+  {
+    title: "Detective Pikachu",
+    systems: [{ releaseDate: "2016", system: "Nintendo 3DS" }],
+    regionRelease: {
+      japan: "February 3, 2016",
+      northAmerica: "March 23, 2018",
+      europe: "March 23, 2018",
+      australasia: "March 24, 2018",
+    },
+  },
+  {
+    title: "Detective Pikachu Returns",
+    systems: [{ releaseDate: "2023", system: "Nintendo Switch" }],
+    regionRelease: {
+      worldwide: "October 6, 2023",
+    },
+  },
+];
+export const spinOffArcadeGames = [
+  {
+    title: "Pokémon Battrio",
+    systems: [{ releaseDate: "2007", system: "Arcade" }],
+    regionRelease: {
+      japan: "November 21, 2007",
+    },
+  },
+  {
+    title: "Pokémon Tretta",
+    systems: [{ releaseDate: "2012", system: "Arcade" }],
+    regionRelease: {
+      japan: "July 14, 2012",
+    },
+  },
+  {
+    title: "Pokémon Tretta Lab",
+    systems: [
+      { releaseDate: "2013", system: "Nintendo 3DS" },
+      { releaseDate: "2013", system: "Arcade" },
+    ],
+    regionRelease: {
+      japan: "August 10, 2013",
+    },
+  },
+  {
+    title: "Pokémon Ga-Olé",
+    systems: [{ releaseDate: "2016", system: "Arcade" }],
+    regionRelease: {
+      japan: "July 7, 2016",
+    },
+  },
+  {
+    title: "Pokkén Tournament",
+    systems: [
+      { releaseDate: "2015", system: "Arcade" },
+      { releaseDate: "2016", system: "Wii U" },
+    ],
+    regionRelease: {
+      japan: "July 16, 2015 (Arcade)",
+      worldwide: "March 18, 2016 (Wii U)",
+    },
+  },
+  {
+    title: "Pokkén Tournament DX",
+    systems: [{ releaseDate: "2017", system: "Nintendo Switch" }],
+    regionRelease: {
+      worldwide: "September 22, 2017",
+    },
+  },
+  {
+    title: "Pokémon Mezastar",
+    systems: [{ releaseDate: "2020", system: "Arcade" }],
+    regionRelease: {
+      japan: "September 17, 2020",
+    },
+  },
+];
+export const spinOffPokeParkGames = [
+  {
+    title: "PokéPark Wii: Pikachu's Adventure",
+    systems: [
+      { releaseDate: "2009", system: "Wii" },
+      { releaseDate: "2016", system: "Wii U Virtual Console" },
+    ],
+    regionRelease: {
+      japan: "December 5, 2009",
+      europe: "July 9, 2010",
+      northAmerica: "November 1, 2010",
+      australasia: "September 23, 2010",
+    },
+    notes: "Developed by Creatures, Inc.",
+  },
+  {
+    title: "PokéPark 2: Wonders Beyond",
+    systems: [{ releaseDate: "2011", system: "Wii" }],
+    regionRelease: {
+      japan: "November 12, 2011",
+      northAmerica: "February 27, 2012",
+      europe: "March 23, 2012",
+      australasia: "March 29, 2012",
+    },
+  },
+];
+export const otherGames = [
+  {
+    title: "Pokémon Dash",
+    systems: [{ releaseDate: "2004", system: "Nintendo DS" }],
+    regionRelease: {
+      japan: "December 2, 2004",
+      europe: "March 11, 2005",
+      northAmerica: "March 13, 2005",
+      australasia: "April 7, 2005",
+    },
+    notes:
+      "Developed by Ambrella. First appearance of a fourth generation Pokémon (Munchlax).",
+  },
+  {
+    title: "Pokémate",
+    systems: [{ releaseDate: "2006", system: "Mobile phone" }],
+    regionRelease: {
+      japan: "December 31, 2006",
+    },
+    notes: "Developed by Square Enix. Only released in Japan.",
+  },
+  {
+    title: "Learn with Pokémon: Typing Adventure",
+    systems: [{ releaseDate: "2011", system: "Nintendo DS" }],
+    regionRelease: {
+      japan: "April 21, 2011",
+      europe: "September 21, 2012",
+    },
+    notes:
+      "Each copy of the game was bundled with a wireless keyboard. Developed by Genius Sonority.",
+  },
+  {
+    title: "Pokémon Conquest",
+    systems: [{ releaseDate: "2012", system: "Nintendo DS" }],
+    regionRelease: {
+      japan: "March 17, 2012",
+      northAmerica: "June 18, 2012",
+      australasia: "June 21, 2012",
+      europe: "July 27, 2012",
+    },
+    notes:
+      "Developed by Tecmo Koei. Crossover with the Nobunaga's Ambition strategy series. Known in Japan as Pokemon Plus - Nobunaga no Yabou.",
+  },
+  {
+    title: "Pokémon Art Academy",
+    systems: [{ releaseDate: "2014", system: "Nintendo 3DS" }],
+    regionRelease: {
+      japan: "June 19, 2014",
+      europe: "July 4, 2014",
+      australasia: "July 5, 2014",
+      northAmerica: "October 24, 2014",
+    },
+    notes: "Developed by Headstrong Games.",
+  },
+  {
+    title: "Pokémon: Magikarp Jump",
+    systems: [
+      { releaseDate: "2017", system: "Android" },
+      { releaseDate: "2017", system: "iOS" },
+    ],
+    regionRelease: {
+      worldwide: "May 24, 2017",
+    },
+  },
+  {
+    title: "Pokémon Quest",
+    systems: [
+      { releaseDate: "2018", system: "Nintendo Switch" },
+      { releaseDate: "2018", system: "Android" },
+      { releaseDate: "2018", system: "iOS" },
+    ],
+    regionRelease: {
+      worldwide: "May 30, 2018",
+    },
+    notes: "Developed by Game Freak.",
+  },
+  {
+    title: "Pokémon Unite",
+    systems: [
+      { releaseDate: "2021", system: "Nintendo Switch" },
+      { releaseDate: "2021", system: "iOS" },
+      { releaseDate: "2021", system: "Android" },
+    ],
+    regionRelease: {
+      worldwide: "July 21, 2021",
+    },
+  },
+];
+
+export const PokeMINIGames = [
+  {
+    title: "Pokémon Party Mini",
+    systems: [{ releaseDate: "2001-11-16", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2001-12-14",
+      northAmerica: "2001-11-16",
+      europe: "2002-03-15",
+    },
+  },
+  {
+    title: "Pokémon Pinball Mini",
+    systems: [{ releaseDate: "2001-11-30", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2001-12-14",
+      northAmerica: "2001-11-30",
+      europe: "2002-03-15",
+    },
+  },
+  {
+    title: "Pokémon Puzzle Collection",
+    systems: [{ releaseDate: "2001-12-14", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2001-12-14",
+      northAmerica: "2001-11-16",
+      europe: "2002-03-15",
+    },
+  },
+  {
+    title: "Pokémon Puzzle Collection Vol. 2",
+    systems: [{ releaseDate: "2002-04-26", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2002-04-26",
+    },
+  },
+  {
+    title: "Pokémon Zany Cards",
+    systems: [{ releaseDate: "2001-11-16", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2001-12-14",
+      northAmerica: "2001-11-16",
+      europe: "2002-03-15",
+    },
+  },
+  {
+    title: "Pokémon Tetris",
+    systems: [{ releaseDate: "2002-03-15", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2002-03-21",
+      europe: "2002-03-15",
+    },
+  },
+  {
+    title: "Pokémon Race Mini",
+    systems: [{ releaseDate: "2002-07-19", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2002-07-19",
+    },
+  },
+  {
+    title: "Pichu Bros. Mini",
+    systems: [{ releaseDate: "2002-08-09", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2002-08-09",
+    },
+  },
+  {
+    title: "Togepi’s Great Adventure",
+    systems: [{ releaseDate: "2002-10-18", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2002-10-18",
+    },
+  },
+  {
+    title: "Pokémon Breeder Mini",
+    systems: [{ releaseDate: "2002-12-14", system: "Pokemon MINI" }],
+    regionRelease: {
+      japan: "2002-12-14",
+    },
+  },
+];
+// to do
+// add mobile games & pc and computer games
