@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react";
 import "./pokedex.css";
-// import axios from "axios";
 
 import { OnePokemon } from "./onePokemon";
 export function Pokedex() {
