@@ -23,7 +23,7 @@ import legendArceusLogo from "./logo/Pokémon Legends Arceus.png";
 import scarletAndVioletLogo from "./logo/Pokémon Scarlet and Violet.jpg";
 interface pokemonGamesInterface {
   title: string;
-  logo: any;
+  logo: object;
   systems: { releaseDate: string; system: string }[];
   regionRelease: { region: string; date: string }[];
 }
