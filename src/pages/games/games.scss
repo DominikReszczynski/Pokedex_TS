@@ -1,36 +1,32 @@
-// .games_page{
-//     width: 700px;
-//     background-color: var(--main_blue_colour);
-//     padding: 20px;
-//     margin:0 auto; 
-//     table {
-//         background-color: var(--main_white_colour);
-//         border: 2px solid var(--main_orange_colour);
-//         color: var(--main_orange_colour);
-//         border-collapse: collapse;
-//         td {
-//             border: 2px solid var(--main_orange_colour);
-//         }
-//         .game_logo{
-//             width: 100px;
-//         }
-//         .game_release_date_conteiner{
-//             border: 2px solid var(--main_orange_colour);
-//             .game_release_date{
-//                 display: flex;
-//                 flex-direction: column;
-//                 border: none;
-//                 height: 100;
-                
-                
-//             }
+.games_page{
+    width: 700px;
+    background-color: var(--main_blue_colour);
+    padding: 20px;
+    margin:0 auto; 
+    table {
+        background-color: var(--main_white_colour);
+        border: 2px solid var(--main_orange_colour);
+        color: var(--main_orange_colour);
+        border-collapse: collapse;
+        td {
+            border: 2px solid var(--main_orange_colour);
+        }
+        .game_logo{
+            width: 100px;
+        }
+        .game_release_date_conteiner{
+            border: 2px solid var(--main_orange_colour);
+            .game_release_date{
+                display: flex;
+                flex-direction: column;
+            }
             
-//         }
-//     }
-//     .table_header td{
-//         border: 2px solid var(--main_orange_colour);
-//     }
-//     span {
-//         color: black;
-//     }
-// }
+        }
+    }
+    .table_header td{
+        border: 2px solid var(--main_orange_colour);
+    }
+    span {
+        color: black;
+    }
+}
