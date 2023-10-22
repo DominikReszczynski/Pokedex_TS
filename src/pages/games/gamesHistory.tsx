@@ -92,6 +92,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Ruby and Sapphire",
+    logo: { rubyAndSapphireLogo },
     systems: [{ releaseDate: "2002", system: "Game Boy Advance" }],
     regionRelease: {
       japan: "November 21, 2002",
@@ -102,6 +103,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon FireRed and LeafGreen",
+    logo: { fireRedLogo },
     systems: [{ releaseDate: "2004", system: "Game Boy Advance" }],
     regionRelease: {
       japan: "January 29, 2004",
@@ -112,6 +114,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Emerald",
+    logo: { emeraldLogo },
     systems: [{ releaseDate: "2004", system: "Game Boy Advance" }],
     regionRelease: {
       japan: "September 16, 2004",
@@ -122,6 +125,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Diamond and Pearl",
+    logo: { diamondAndPerlLogo },
     systems: [{ releaseDate: "2006", system: "Nintendo DS" }],
     regionRelease: {
       japan: "September 28, 2006",
@@ -132,6 +136,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Platinum",
+    logo: { platinumLogo },
     systems: [{ releaseDate: "2008", system: "Nintendo DS" }],
     regionRelease: {
       japan: "September 13, 2008",
@@ -142,6 +147,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon HeartGold and SoulSilver",
+    logo: { heartGoldAndSoulSilverLogo },
     systems: [{ releaseDate: "2009", system: "Nintendo DS" }],
     regionRelease: {
       japan: "September 12, 2009",
@@ -152,6 +158,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Black and White",
+    logo: { blackAndWhiteLogo },
     systems: [{ releaseDate: "2010", system: "Nintendo DS" }],
     regionRelease: {
       japan: "September 18, 2010",
@@ -162,6 +169,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Black 2 and White 2",
+    logo: { black2AndWhite2Logo },
     systems: [{ releaseDate: "2012", system: "Nintendo DS" }],
     regionRelease: {
       japan: "June 23, 2012",
@@ -172,6 +180,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon X and Y",
+    logo: { xAndYLogo },
     systems: [{ releaseDate: "2013", system: "Nintendo 3DS" }],
     regionRelease: {
       WW: "October 12, 2013",
@@ -179,6 +188,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Omega Ruby and Alpha Sapphire",
+    logo: { omegaRubyAndAlphaSapphireLogo },
     systems: [{ releaseDate: "2014", system: "Nintendo 3DS" }],
     regionRelease: {
       japan: "November 21, 2014",
@@ -189,6 +199,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Sun and Moon",
+    logo: { sunAndMoonLogo },
     systems: [{ releaseDate: "2016", system: "Nintendo 3DS" }],
     regionRelease: {
       japan: "November 18, 2016",
@@ -199,6 +210,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Ultra Sun and Ultra Moon",
+    logo: { ultraSunAndUltraMoonLogo },
     systems: [{ releaseDate: "2017", system: "Nintendo 3DS" }],
     regionRelease: {
       WW: "November 17, 2017",
@@ -206,6 +218,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!",
+    logo: { letsGoLogo },
     systems: [{ releaseDate: "2018", system: "Nintendo Switch" }],
     regionRelease: {
       WW: "November 16, 2018",
@@ -213,6 +226,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Sword and Shield",
+    logo: { swordAndShieldLogo },
     systems: [{ releaseDate: "2019", system: "Nintendo Switch" }],
     regionRelease: {
       WW: "November 15, 2019",
@@ -220,6 +234,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Brilliant Diamond and Shining Pearl",
+    logo: { briliantDiamondAndShiningPerlLogo },
     systems: [{ releaseDate: "2021", system: "Nintendo Switch" }],
     regionRelease: {
       WW: "November 19, 2021",
@@ -227,6 +242,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Legends: Arceus",
+    logo: { legendArceusLogo },
     systems: [{ releaseDate: "2022", system: "Nintendo Switch" }],
     regionRelease: {
       WW: "January 28, 2022",
@@ -234,6 +250,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Scarlet and Violet",
+    logo: { scarletAndVioletLogo },
     systems: [{ releaseDate: "2022", system: "Nintendo Switch" }],
     regionRelease: {
       WW: "November 18, 2022",
