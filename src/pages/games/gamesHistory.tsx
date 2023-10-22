@@ -5,7 +5,7 @@ import goldAndSilverLogo from "./logo/Pokémon Gold and Silver.png";
 import crystalLogo from "./logo/Pokémon Crystal.png";
 import rubyAndSapphireLogo from "./logo/Pokémon Ruby and Sapphire.png";
 import fireRedLogo from "./logo/Pokemon_FireRed.svg.png";
-import leafGreenLogo from "./logo/Pokemon_LeafGreen.webp";
+//import leafGreenLogo from "./logo/Pokemon_LeafGreen.webp";
 import emeraldLogo from "./logo/Pokémon Emerald.webp";
 import diamondAndPerlLogo from "./logo/Pokémon Diamond and Pearl.png";
 import platinumLogo from "./logo/Pokémon Platinum.png";
