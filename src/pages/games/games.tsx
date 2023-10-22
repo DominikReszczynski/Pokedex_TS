@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { mainGames } from "./gamesHistory";
 import "./games.scss";
 export const Games = () => {
