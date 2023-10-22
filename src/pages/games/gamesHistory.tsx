@@ -1,6 +1,30 @@
+import redAndGreenLogo from "./logo/Pocket Monsters Red and Green.png";
+import redAndBlueLogo from "./logo/Pokémon Red and Blue.png";
+import yellowLogo from "./logo/Pokémon Yellow.png";
+import goldAndSilverLogo from "./logo/Pokémon Gold and Silver.png";
+import crystalLogo from "./logo/Pokémon Crystal.png";
+import rubyAndSapphireLogo from "./logo/Pokémon Ruby and Sapphire.png";
+import fireRedLogo from "./logo/Pokemon_FireRed.svg.png";
+import leafGreenLogo from "./logo/Pokemon_LeafGreen.webp";
+import emeraldLogo from "./logo/Pokémon Emerald.webp";
+import diamondAndPerlLogo from "./logo/Pokémon Diamond and Pearl.png";
+import platinumLogo from "./logo/Pokémon Platinum.png";
+import heartGoldAndSoulSilverLogo from "./logo/Pokémon HeartGold and SoulSilver.png";
+import blackAndWhiteLogo from "./logo/Pokémon Black and White.webp";
+import black2AndWhite2Logo from "./logo/Pokémon Black 2 and White 2.webp";
+import xAndYLogo from "./logo/Pokémon X and Y.png";
+import omegaRubyAndAlphaSapphireLogo from "./logo/Pokémon Omega Ruby and Alpha Sapphire.webp";
+import sunAndMoonLogo from "./logo/Pokémon Sun and Moon.png";
+import ultraSunAndUltraMoonLogo from "./logo/Pokémon Ultra Sun and Ultra Moon.webp";
+import letsGoLogo from "./logo/LetGoLetGoEevee.png";
+import swordAndShieldLogo from "./logo/Pokémon Sword and Shield.jpg";
+import briliantDiamondAndShiningPerlLogo from "./logo/Pokémon Brilliant Diamond and Shining Pearl.jpg";
+import legendArceusLogo from "./logo/Pokémon Legends Arceus.png";
+import scarletAndVioletLogo from "./logo/Pokémon Scarlet and Violet.jpg";
 export const mainGames = [
   {
     title: "Pocket Monsters Red and Green",
+    logo: { redAndGreenLogo },
     systems: [
       { realaseDate: "1996", system: "Game Boy" },
       { realaseDate: "2016", system: "3DS Virtual Console" },
@@ -11,6 +35,7 @@ export const mainGames = [
   },
   {
     title: "Pocket Monsters Blue (Pokémon Red and Blue)",
+    logo: { redAndBlueLogo },
     systems: [
       { releaseDate: "1996", system: "Game Boy (CoroCoro Comic)" },
       { releaseDate: "1999", system: "Game Boy (retail)" },
@@ -25,6 +50,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Yellow: Special Pikachu Edition",
+    logo: { yellowLogo },
     systems: [
       { releaseDate: "1998", system: "Game Boy" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
@@ -38,6 +64,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Gold and Silver",
+    logo: { goldAndSilverLogo },
     systems: [
       { releaseDate: "1999", system: "Game Boy Color" },
       { releaseDate: "2017", system: "3DS Virtual Console" },
@@ -51,6 +78,7 @@ export const mainGames = [
   },
   {
     title: "Pokémon Crystal",
+    logo: { crystalLogo },
     systems: [
       { releaseDate: "2000", system: "Game Boy Color" },
       { releaseDate: "2018", system: "3DS Virtual Console" },
