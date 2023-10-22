@@ -1,5 +1,8 @@
 :root {
   --main_orange_colour: #EF9A0D;
+  --main_white_colour: #F5F5F5;
+  --main_blue_colour: #4D4C7D;
+  --main_dark_blue_colour: #363062;
 
   font-family: 'Righteous', serif;
   line-height: 1.5;
@@ -8,7 +11,7 @@
   color: rgba(255, 255, 255, 0.87);
   width: 100vw;
   height: 100%;
-  background-color: #646cff;
+  background-color: var(--main_dark_blue_colour);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -55,7 +58,7 @@ button:focus-visible {
 }
 
 .site_conteiner {
-  height: calc(100vh - 50px - 70px);
+  min-height: calc(100vh - 50px - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;

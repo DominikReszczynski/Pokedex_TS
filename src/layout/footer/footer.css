@@ -1,7 +1,7 @@
 .footer{
     position: sticky;
     height: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main_white_colour);
 }
 .footer_li img{
 height: 50px;

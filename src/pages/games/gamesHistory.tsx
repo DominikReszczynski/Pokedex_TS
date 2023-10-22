@@ -23,14 +23,14 @@ import legendArceusLogo from "./logo/Pokémon Legends Arceus.png";
 import scarletAndVioletLogo from "./logo/Pokémon Scarlet and Violet.jpg";
 interface pokemonGamesInterface {
   title: string;
-  logo: object;
+  logo: JSX.Element;
   systems: { releaseDate: string; system: string }[];
   regionRelease: { region: string; date: string }[];
 }
 export const mainGames: pokemonGamesInterface[] = [
   {
     title: "Pocket Monsters Red and Green",
-    logo: { redAndGreenLogo },
+    logo: <img className="game_logo" src={redAndGreenLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "1996", system: "Game Boy" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
@@ -39,7 +39,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pocket Monsters Blue (Pokémon Red and Blue)",
-    logo: { redAndBlueLogo },
+    logo: <img className="game_logo" src={redAndBlueLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "1996", system: "Game Boy (CoroCoro Comic)" },
       { releaseDate: "1999", system: "Game Boy (retail)" },
@@ -54,7 +54,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Yellow: Special Pikachu Edition",
-    logo: { yellowLogo },
+    logo: <img className="game_logo" src={yellowLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "1998", system: "Game Boy" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
@@ -68,7 +68,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Gold and Silver",
-    logo: { goldAndSilverLogo },
+    logo: (
+      <img className="game_logo" src={goldAndSilverLogo} alt="Opis obrazu" />
+    ),
     systems: [
       { releaseDate: "1999", system: "Game Boy Color" },
       { releaseDate: "2017", system: "3DS Virtual Console" },
@@ -82,7 +84,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Crystal",
-    logo: { crystalLogo },
+    logo: <img className="game_logo" src={crystalLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "2000", system: "Game Boy Color" },
       { releaseDate: "2018", system: "3DS Virtual Console" },
@@ -96,7 +98,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Ruby and Sapphire",
-    logo: { rubyAndSapphireLogo },
+    logo: (
+      <img className="game_logo" src={rubyAndSapphireLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2002", system: "Game Boy Advance" }],
     regionRelease: [
       { region: "japan", date: "November 21, 2002" },
@@ -107,7 +111,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pocket Monsters Red and Green",
-    logo: { redAndGreenLogo },
+    logo: <img className="game_logo" src={redAndGreenLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "1996", system: "Game Boy" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
@@ -116,7 +120,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pocket Monsters Blue (Pokémon Red and Blue)",
-    logo: { redAndBlueLogo },
+    logo: <img className="game_logo" src={redAndBlueLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "1996", system: "Game Boy (CoroCoro Comic)" },
       { releaseDate: "1999", system: "Game Boy (retail)" },
@@ -131,7 +135,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Yellow: Special Pikachu Edition",
-    logo: { yellowLogo },
+    logo: <img className="game_logo" src={yellowLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "1998", system: "Game Boy" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
@@ -145,7 +149,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Gold and Silver",
-    logo: { goldAndSilverLogo },
+    logo: (
+      <img className="game_logo" src={goldAndSilverLogo} alt="Opis obrazu" />
+    ),
     systems: [
       { releaseDate: "1999", system: "Game Boy Color" },
       { releaseDate: "2017", system: "3DS Virtual Console" },
@@ -159,7 +165,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Crystal",
-    logo: { crystalLogo },
+    logo: <img className="game_logo" src={crystalLogo} alt="Opis obrazu" />,
     systems: [
       { releaseDate: "2000", system: "Game Boy Color" },
       { releaseDate: "2018", system: "3DS Virtual Console" },
@@ -173,7 +179,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Ruby and Sapphire",
-    logo: { rubyAndSapphireLogo },
+    logo: (
+      <img className="game_logo" src={rubyAndSapphireLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2002", system: "Game Boy Advance" }],
     regionRelease: [
       { region: "japan", date: "November 21, 2002" },
@@ -184,7 +192,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon FireRed and LeafGreen",
-    logo: { fireRedLogo },
+    logo: <img className="game_logo" src={fireRedLogo} alt="Opis obrazu" />,
     systems: [{ releaseDate: "2004", system: "Game Boy Advance" }],
     regionRelease: [
       { region: "japan", date: "January 29, 2004" },
@@ -195,7 +203,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Emerald",
-    logo: { emeraldLogo },
+    logo: <img className="game_logo" src={emeraldLogo} alt="Opis obrazu" />,
     systems: [{ releaseDate: "2004", system: "Game Boy Advance" }],
     regionRelease: [
       { region: "japan", date: "September 16, 2004" },
@@ -206,7 +214,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Diamond and Pearl",
-    logo: { diamondAndPerlLogo },
+    logo: (
+      <img className="game_logo" src={diamondAndPerlLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2006", system: "Nintendo DS" }],
     regionRelease: [
       { region: "japan", date: "September 28, 2006" },
@@ -217,7 +227,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Platinum",
-    logo: { platinumLogo },
+    logo: <img className="game_logo" src={platinumLogo} alt="Opis obrazu" />,
     systems: [{ releaseDate: "2008", system: "Nintendo DS" }],
     regionRelease: [
       { region: "japan", date: "September 13, 2008" },
@@ -228,7 +238,13 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon HeartGold and SoulSilver",
-    logo: { heartGoldAndSoulSilverLogo },
+    logo: (
+      <img
+        className="game_logo"
+        src={heartGoldAndSoulSilverLogo}
+        alt="Opis obrazu"
+      />
+    ),
     systems: [{ releaseDate: "2009", system: "Nintendo DS" }],
     regionRelease: [
       { region: "japan", date: "September 12, 2009" },
@@ -239,7 +255,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Black and White",
-    logo: { blackAndWhiteLogo },
+    logo: (
+      <img className="game_logo" src={blackAndWhiteLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2010", system: "Nintendo DS" }],
     regionRelease: [
       { region: "japan", date: "September 18, 2010" },
@@ -250,7 +268,9 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Black 2 and White 2",
-    logo: { black2AndWhite2Logo },
+    logo: (
+      <img className="game_logo" src={black2AndWhite2Logo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2012", system: "Nintendo DS" }],
     regionRelease: [
       { region: "japan", date: "June 23, 2012" },
@@ -261,13 +281,19 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon X and Y",
-    logo: { xAndYLogo },
+    logo: <img className="game_logo" src={xAndYLogo} alt="Opis obrazu" />,
     systems: [{ releaseDate: "2013", system: "Nintendo 3DS" }],
     regionRelease: [{ region: "worldwide", date: "October 12, 2013" }],
   },
   {
     title: "Pokémon Omega Ruby and Alpha Sapphire",
-    logo: { omegaRubyAndAlphaSapphireLogo },
+    logo: (
+      <img
+        className="game_logo"
+        src={omegaRubyAndAlphaSapphireLogo}
+        alt="Opis obrazu"
+      />
+    ),
     systems: [{ releaseDate: "2014", system: "Nintendo 3DS" }],
     regionRelease: [
       { region: "japan", date: "November 21, 2014" },
@@ -278,7 +304,7 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Sun and Moon",
-    logo: { sunAndMoonLogo },
+    logo: <img className="game_logo" src={sunAndMoonLogo} alt="Opis obrazu" />,
     systems: [{ releaseDate: "2016", system: "Nintendo 3DS" }],
     regionRelease: [
       { region: "japan", date: "November 18, 2016" },
@@ -289,37 +315,55 @@ export const mainGames: pokemonGamesInterface[] = [
   },
   {
     title: "Pokémon Ultra Sun and Ultra Moon",
-    logo: { ultraSunAndUltraMoonLogo },
+    logo: (
+      <img
+        className="game_logo"
+        src={ultraSunAndUltraMoonLogo}
+        alt="Opis obrazu"
+      />
+    ),
     systems: [{ releaseDate: "2017", system: "Nintendo 3DS" }],
     regionRelease: [{ region: "worldwide", date: "November 17, 2017" }],
   },
   {
     title: "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!",
-    logo: { letsGoLogo },
+    logo: <img className="game_logo" src={letsGoLogo} alt="Opis obrazu" />,
     systems: [{ releaseDate: "2018", system: "Nintendo Switch" }],
     regionRelease: [{ region: "worldwide", date: "November 16, 2018" }],
   },
   {
     title: "Pokémon Sword and Shield",
-    logo: { swordAndShieldLogo },
+    logo: (
+      <img className="game_logo" src={swordAndShieldLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2019", system: "Nintendo Switch" }],
     regionRelease: [{ region: "worldwide", date: "November 15, 2019" }],
   },
   {
     title: "Pokémon Brilliant Diamond and Shining Pearl",
-    logo: { briliantDiamondAndShiningPerlLogo },
+    logo: (
+      <img
+        className="game_logo"
+        src={briliantDiamondAndShiningPerlLogo}
+        alt="Opis obrazu"
+      />
+    ),
     systems: [{ releaseDate: "2021", system: "Nintendo Switch" }],
     regionRelease: [{ region: "worldwide", date: "November 19, 2021" }],
   },
   {
     title: "Pokémon Legends: Arceus",
-    logo: { legendArceusLogo },
+    logo: (
+      <img className="game_logo" src={legendArceusLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2022", system: "Nintendo Switch" }],
     regionRelease: [{ region: "worldwide", date: "January 28, 2022" }],
   },
   {
     title: "Pokémon Scarlet and Violet",
-    logo: { scarletAndVioletLogo },
+    logo: (
+      <img className="game_logo" src={scarletAndVioletLogo} alt="Opis obrazu" />
+    ),
     systems: [{ releaseDate: "2022", system: "Nintendo Switch" }],
     regionRelease: [{ region: "worldwide", date: "November 18, 2022" }],
   },
