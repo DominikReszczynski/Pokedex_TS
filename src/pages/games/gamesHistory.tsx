@@ -21,17 +21,21 @@ import swordAndShieldLogo from "./logo/Pokémon Sword and Shield.jpg";
 import briliantDiamondAndShiningPerlLogo from "./logo/Pokémon Brilliant Diamond and Shining Pearl.jpg";
 import legendArceusLogo from "./logo/Pokémon Legends Arceus.png";
 import scarletAndVioletLogo from "./logo/Pokémon Scarlet and Violet.jpg";
-export const mainGames = [
+interface pokemonGamesInterface {
+  title: string;
+  logo: any;
+  systems: { releaseDate: string; system: string }[];
+  regionRelease: { region: string; date: string }[];
+}
+export const mainGames: pokemonGamesInterface[] = [
   {
     title: "Pocket Monsters Red and Green",
     logo: { redAndGreenLogo },
     systems: [
-      { realaseDate: "1996", system: "Game Boy" },
-      { realaseDate: "2016", system: "3DS Virtual Console" },
+      { releaseDate: "1996", system: "Game Boy" },
+      { releaseDate: "2016", system: "3DS Virtual Console" },
     ],
-    regionRealase: {
-      japan: "February 27, 1996",
-    },
+    regionRelease: [{ region: "japan", date: "February 27, 1996" }],
   },
   {
     title: "Pocket Monsters Blue (Pokémon Red and Blue)",
@@ -41,12 +45,12 @@ export const mainGames = [
       { releaseDate: "1999", system: "Game Boy (retail)" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
     ],
-    regionRelease: {
-      japan: "October 10, 1999 (retail)",
-      northAmerica: "September 28, 1998",
-      australasia: "October 23, 1998",
-      europ: "October 5, 1999",
-    },
+    regionRelease: [
+      { region: "japan", date: "October 10, 1999 (retail)" },
+      { region: "northAmerica", date: "September 28, 1998" },
+      { region: "australasia", date: "October 23, 1998" },
+      { region: "europe", date: "October 5, 1999" },
+    ],
   },
   {
     title: "Pokémon Yellow: Special Pikachu Edition",
@@ -55,12 +59,12 @@ export const mainGames = [
       { releaseDate: "1998", system: "Game Boy" },
       { releaseDate: "2016", system: "3DS Virtual Console" },
     ],
-    regionRelease: {
-      japan: "September 12, 1998",
-      northAmerica: "October 18, 1999",
-      australasia: "September 3, 1999",
-      europe: "June 16, 2000",
-    },
+    regionRelease: [
+      { region: "japan", date: "September 12, 1998" },
+      { region: "northAmerica", date: "October 18, 1999" },
+      { region: "australasia", date: "September 3, 1999" },
+      { region: "europe", date: "June 16, 2000" },
+    ],
   },
   {
     title: "Pokémon Gold and Silver",
@@ -69,12 +73,12 @@ export const mainGames = [
       { releaseDate: "1999", system: "Game Boy Color" },
       { releaseDate: "2017", system: "3DS Virtual Console" },
     ],
-    regionRelease: {
-      japan: "November 21, 1999",
-      australasia: "October 13, 2000",
-      northAmerica: "October 15, 2000",
-      europe: "April 6, 2001",
-    },
+    regionRelease: [
+      { region: "japan", date: "November 21, 1999" },
+      { region: "australasia", date: "October 13, 2000" },
+      { region: "northAmerica", date: "October 15, 2000" },
+      { region: "europe", date: "April 6, 2001" },
+    ],
   },
   {
     title: "Pokémon Crystal",
@@ -83,178 +87,241 @@ export const mainGames = [
       { releaseDate: "2000", system: "Game Boy Color" },
       { releaseDate: "2018", system: "3DS Virtual Console" },
     ],
-    regionRelease: {
-      japan: "December 14, 2000",
-      northAmerica: "July 29, 2001",
-      australasia: "September 30, 2001",
-      europe: "November 2, 2001",
-    },
+    regionRelease: [
+      { region: "japan", date: "December 14, 2000" },
+      { region: "northAmerica", date: "July 29, 2001" },
+      { region: "australasia", date: "September 30, 2001" },
+      { region: "europe", date: "November 2, 2001" },
+    ],
   },
   {
     title: "Pokémon Ruby and Sapphire",
     logo: { rubyAndSapphireLogo },
     systems: [{ releaseDate: "2002", system: "Game Boy Advance" }],
-    regionRelease: {
-      japan: "November 21, 2002",
-      northAmerica: "March 19, 2003",
-      australasia: "April 3, 2003",
-      europe: "July 25, 2003",
-    },
+    regionRelease: [
+      { region: "japan", date: "November 21, 2002" },
+      { region: "northAmerica", date: "March 19, 2003" },
+      { region: "australasia", date: "April 3, 2003" },
+      { region: "europe", date: "July 25, 2003" },
+    ],
+  },
+  {
+    title: "Pocket Monsters Red and Green",
+    logo: { redAndGreenLogo },
+    systems: [
+      { releaseDate: "1996", system: "Game Boy" },
+      { releaseDate: "2016", system: "3DS Virtual Console" },
+    ],
+    regionRelease: [{ region: "japan", date: "February 27, 1996" }],
+  },
+  {
+    title: "Pocket Monsters Blue (Pokémon Red and Blue)",
+    logo: { redAndBlueLogo },
+    systems: [
+      { releaseDate: "1996", system: "Game Boy (CoroCoro Comic)" },
+      { releaseDate: "1999", system: "Game Boy (retail)" },
+      { releaseDate: "2016", system: "3DS Virtual Console" },
+    ],
+    regionRelease: [
+      { region: "japan", date: "October 10, 1999 (retail)" },
+      { region: "northAmerica", date: "September 28, 1998" },
+      { region: "australasia", date: "October 23, 1998" },
+      { region: "europe", date: "October 5, 1999" },
+    ],
+  },
+  {
+    title: "Pokémon Yellow: Special Pikachu Edition",
+    logo: { yellowLogo },
+    systems: [
+      { releaseDate: "1998", system: "Game Boy" },
+      { releaseDate: "2016", system: "3DS Virtual Console" },
+    ],
+    regionRelease: [
+      { region: "japan", date: "September 12, 1998" },
+      { region: "northAmerica", date: "October 18, 1999" },
+      { region: "australasia", date: "September 3, 1999" },
+      { region: "europe", date: "June 16, 2000" },
+    ],
+  },
+  {
+    title: "Pokémon Gold and Silver",
+    logo: { goldAndSilverLogo },
+    systems: [
+      { releaseDate: "1999", system: "Game Boy Color" },
+      { releaseDate: "2017", system: "3DS Virtual Console" },
+    ],
+    regionRelease: [
+      { region: "japan", date: "November 21, 1999" },
+      { region: "australasia", date: "October 13, 2000" },
+      { region: "northAmerica", date: "October 15, 2000" },
+      { region: "europe", date: "April 6, 2001" },
+    ],
+  },
+  {
+    title: "Pokémon Crystal",
+    logo: { crystalLogo },
+    systems: [
+      { releaseDate: "2000", system: "Game Boy Color" },
+      { releaseDate: "2018", system: "3DS Virtual Console" },
+    ],
+    regionRelease: [
+      { region: "japan", date: "December 14, 2000" },
+      { region: "northAmerica", date: "July 29, 2001" },
+      { region: "australasia", date: "September 30, 2001" },
+      { region: "europe", date: "November 2, 2001" },
+    ],
+  },
+  {
+    title: "Pokémon Ruby and Sapphire",
+    logo: { rubyAndSapphireLogo },
+    systems: [{ releaseDate: "2002", system: "Game Boy Advance" }],
+    regionRelease: [
+      { region: "japan", date: "November 21, 2002" },
+      { region: "northAmerica", date: "March 19, 2003" },
+      { region: "australasia", date: "April 3, 2003" },
+      { region: "europe", date: "July 25, 2003" },
+    ],
   },
   {
     title: "Pokémon FireRed and LeafGreen",
     logo: { fireRedLogo },
     systems: [{ releaseDate: "2004", system: "Game Boy Advance" }],
-    regionRelease: {
-      japan: "January 29, 2004",
-      northAmerica: "September 9, 2004",
-      australasia: "September 23, 2004",
-      europe: "October 1, 2004",
-    },
+    regionRelease: [
+      { region: "japan", date: "January 29, 2004" },
+      { region: "northAmerica", date: "September 9, 2004" },
+      { region: "australasia", date: "September 23, 2004" },
+      { region: "europe", date: "October 1, 2004" },
+    ],
   },
   {
     title: "Pokémon Emerald",
     logo: { emeraldLogo },
     systems: [{ releaseDate: "2004", system: "Game Boy Advance" }],
-    regionRelease: {
-      japan: "September 16, 2004",
-      northAmerica: "May 1, 2005",
-      australasia: "June 9, 2005",
-      europe: "October 21, 2005",
-    },
+    regionRelease: [
+      { region: "japan", date: "September 16, 2004" },
+      { region: "northAmerica", date: "May 1, 2005" },
+      { region: "australasia", date: "June 9, 2005" },
+      { region: "europe", date: "October 21, 2005" },
+    ],
   },
   {
     title: "Pokémon Diamond and Pearl",
     logo: { diamondAndPerlLogo },
     systems: [{ releaseDate: "2006", system: "Nintendo DS" }],
-    regionRelease: {
-      japan: "September 28, 2006",
-      northAmerica: "April 22, 2007",
-      australasia: "June 21, 2007",
-      europe: "July 27, 2007",
-    },
+    regionRelease: [
+      { region: "japan", date: "September 28, 2006" },
+      { region: "northAmerica", date: "April 22, 2007" },
+      { region: "australasia", date: "June 21, 2007" },
+      { region: "europe", date: "July 27, 2007" },
+    ],
   },
   {
     title: "Pokémon Platinum",
     logo: { platinumLogo },
     systems: [{ releaseDate: "2008", system: "Nintendo DS" }],
-    regionRelease: {
-      japan: "September 13, 2008",
-      northAmerica: "March 22, 2009",
-      europe: "May 22, 2009",
-      australasia: "May 14, 2009",
-    },
+    regionRelease: [
+      { region: "japan", date: "September 13, 2008" },
+      { region: "northAmerica", date: "March 22, 2009" },
+      { region: "europe", date: "May 22, 2009" },
+      { region: "australasia", date: "May 14, 2009" },
+    ],
   },
   {
     title: "Pokémon HeartGold and SoulSilver",
     logo: { heartGoldAndSoulSilverLogo },
     systems: [{ releaseDate: "2009", system: "Nintendo DS" }],
-    regionRelease: {
-      japan: "September 12, 2009",
-      northAmerica: "March 14, 2010",
-      australasia: "March 25, 2010",
-      europe: "March 26, 2010",
-    },
+    regionRelease: [
+      { region: "japan", date: "September 12, 2009" },
+      { region: "northAmerica", date: "March 14, 2010" },
+      { region: "australasia", date: "March 25, 2010" },
+      { region: "europe", date: "March 26, 2010" },
+    ],
   },
   {
     title: "Pokémon Black and White",
     logo: { blackAndWhiteLogo },
     systems: [{ releaseDate: "2010", system: "Nintendo DS" }],
-    regionRelease: {
-      japan: "September 18, 2010",
-      europe: "March 4, 2011",
-      northAmerica: "March 6, 2011",
-      australasia: "March 10, 2011",
-    },
+    regionRelease: [
+      { region: "japan", date: "September 18, 2010" },
+      { region: "europe", date: "March 4, 2011" },
+      { region: "northAmerica", date: "March 6, 2011" },
+      { region: "australasia", date: "March 10, 2011" },
+    ],
   },
   {
     title: "Pokémon Black 2 and White 2",
     logo: { black2AndWhite2Logo },
     systems: [{ releaseDate: "2012", system: "Nintendo DS" }],
-    regionRelease: {
-      japan: "June 23, 2012",
-      northAmerica: "October 7, 2012",
-      australasia: "October 11, 2012",
-      europe: "October 12, 2012",
-    },
+    regionRelease: [
+      { region: "japan", date: "June 23, 2012" },
+      { region: "northAmerica", date: "October 7, 2012" },
+      { region: "australasia", date: "October 11, 2012" },
+      { region: "europe", date: "October 12, 2012" },
+    ],
   },
   {
     title: "Pokémon X and Y",
     logo: { xAndYLogo },
     systems: [{ releaseDate: "2013", system: "Nintendo 3DS" }],
-    regionRelease: {
-      WW: "October 12, 2013",
-    },
+    regionRelease: [{ region: "worldwide", date: "October 12, 2013" }],
   },
   {
     title: "Pokémon Omega Ruby and Alpha Sapphire",
     logo: { omegaRubyAndAlphaSapphireLogo },
     systems: [{ releaseDate: "2014", system: "Nintendo 3DS" }],
-    regionRelease: {
-      japan: "November 21, 2014",
-      northAmerica: "November 21, 2014",
-      australasia: "November 21, 2014",
-      europe: "November 28, 2014",
-    },
+    regionRelease: [
+      { region: "japan", date: "November 21, 2014" },
+      { region: "northAmerica", date: "November 21, 2014" },
+      { region: "australasia", date: "November 21, 2014" },
+      { region: "europe", date: "November 28, 2014" },
+    ],
   },
   {
     title: "Pokémon Sun and Moon",
     logo: { sunAndMoonLogo },
     systems: [{ releaseDate: "2016", system: "Nintendo 3DS" }],
-    regionRelease: {
-      japan: "November 18, 2016",
-      northAmerica: "November 18, 2016",
-      australasia: "November 18, 2016",
-      europe: "November 23, 2016",
-    },
+    regionRelease: [
+      { region: "japan", date: "November 18, 2016" },
+      { region: "northAmerica", date: "November 18, 2016" },
+      { region: "australasia", date: "November 18, 2016" },
+      { region: "europe", date: "November 23, 2016" },
+    ],
   },
   {
     title: "Pokémon Ultra Sun and Ultra Moon",
     logo: { ultraSunAndUltraMoonLogo },
     systems: [{ releaseDate: "2017", system: "Nintendo 3DS" }],
-    regionRelease: {
-      WW: "November 17, 2017",
-    },
+    regionRelease: [{ region: "worldwide", date: "November 17, 2017" }],
   },
   {
     title: "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!",
     logo: { letsGoLogo },
     systems: [{ releaseDate: "2018", system: "Nintendo Switch" }],
-    regionRelease: {
-      WW: "November 16, 2018",
-    },
+    regionRelease: [{ region: "worldwide", date: "November 16, 2018" }],
   },
   {
     title: "Pokémon Sword and Shield",
     logo: { swordAndShieldLogo },
     systems: [{ releaseDate: "2019", system: "Nintendo Switch" }],
-    regionRelease: {
-      WW: "November 15, 2019",
-    },
+    regionRelease: [{ region: "worldwide", date: "November 15, 2019" }],
   },
   {
     title: "Pokémon Brilliant Diamond and Shining Pearl",
     logo: { briliantDiamondAndShiningPerlLogo },
     systems: [{ releaseDate: "2021", system: "Nintendo Switch" }],
-    regionRelease: {
-      WW: "November 19, 2021",
-    },
+    regionRelease: [{ region: "worldwide", date: "November 19, 2021" }],
   },
   {
     title: "Pokémon Legends: Arceus",
     logo: { legendArceusLogo },
     systems: [{ releaseDate: "2022", system: "Nintendo Switch" }],
-    regionRelease: {
-      WW: "January 28, 2022",
-    },
+    regionRelease: [{ region: "worldwide", date: "January 28, 2022" }],
   },
   {
     title: "Pokémon Scarlet and Violet",
     logo: { scarletAndVioletLogo },
     systems: [{ releaseDate: "2022", system: "Nintendo Switch" }],
-    regionRelease: {
-      WW: "November 18, 2022",
-    },
+    regionRelease: [{ region: "worldwide", date: "November 18, 2022" }],
   },
 ];
 
