@@ -1,5 +1,22 @@
 // @ts-nocheck
-import grassIcone from "../../assets/Grass_icon_SwSh.png";
+import grassIcone from "./types/Grass_icon_SwSh.png";
+import darkIcone from "./types/96px-Dark_icon_SwSh.png";
+import dragonIcone from "./types/96px-Dragon_icon_SwSh.png";
+import electricIcone from "./types/96px-Electric_icon_SwSh.png";
+import fairyIcone from "./types/96px-Fairy_icon_SwSh.png";
+import fightIcone from "./types/96px-Fighting_icon_SwSh.png";
+import flyingIcone from "./types/96px-Flying_icon_SwSh.png";
+import ghostIcone from "./types/96px-Ghost_icon_SwSh.png";
+import groundIcone from "./types/96px-Ground_icon_SwSh.png";
+import iceIcone from "./types/96px-Ice_icon_SwSh.png";
+import normalIcone from "./types/96px-Normal_icon_SwSh.png";
+import poisonIcone from "./types/96px-Poison_icon_SwSh.png";
+import psyhicIcone from "./types/96px-Psychic_icon_SwSh.png";
+import rockIcone from "./types/96px-Rock_icon_SwSh.png";
+import steelIcone from "./types/96px-Steel_icon_SwSh.png";
+import bugIcone from "./types/Bug_icon_SwSh.png";
+import fireIcone from "./types/Fire_icon_SwSh.png";
+import waterIcone from "./types/Water_icon_SwSh.png";
 const getTypeOfPokemon = (typeOfPokemon = []) => typeOfPokemon[0].type.name;
 export const getIconTypeOfPokemon = (typeOfPokemon = []) => {
   return {
@@ -15,123 +32,45 @@ const typesIcon = {
   grass: (
     <img alt="pokemon-type" className="pokemon-type" src={grassIcone}></img>
   ),
-  fire: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/a/ab/Fire_icon_SwSh.png"
-    ></img>
-  ),
+  fire: <img alt="pokemon-type" className="pokemon-type" src={fireIcone}></img>,
   water: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/8/80/Water_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={waterIcone}></img>
   ),
-  bug: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/9/9c/Bug_icon_SwSh.png"
-    ></img>
-  ),
+  bug: <img alt="pokemon-type" className="pokemon-type" src={bugIcone}></img>,
   psychic: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/7/73/Psychic_icon_SwSh.png/96px-Psychic_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={psyhicIcone}></img>
   ),
   ghost: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/0/01/Ghost_icon_SwSh.png/96px-Ghost_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={ghostIcone}></img>
   ),
   fly: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/b/b5/Flying_icon_SwSh.png/96px-Flying_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={flyingIcone}></img>
   ),
-  rock: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/1/11/Rock_icon_SwSh.png/96px-Rock_icon_SwSh.png"
-    ></img>
-  ),
+  rock: <img alt="pokemon-type" className="pokemon-type" src={rockIcone}></img>,
   electric: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/7/7b/Electric_icon_SwSh.png/96px-Electric_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={electricIcone}></img>
   ),
   normal: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/9/95/Normal_icon_SwSh.png/96px-Normal_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={normalIcone}></img>
   ),
   fighting: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/3/3b/Fighting_icon_SwSh.png/96px-Fighting_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={fightIcone}></img>
   ),
   poison: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/8/8d/Poison_icon_SwSh.png/96px-Poison_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={poisonIcone}></img>
   ),
   ground: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/2/27/Ground_icon_SwSh.png/96px-Ground_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={groundIcone}></img>
   ),
   steel: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/0/09/Steel_icon_SwSh.png/96px-Steel_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={steelIcone}></img>
   ),
-  ice: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/1/15/Ice_icon_SwSh.png/96px-Ice_icon_SwSh.png"
-    ></img>
-  ),
+  ice: <img alt="pokemon-type" className="pokemon-type" src={iceIcone}></img>,
   dragon: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/7/70/Dragon_icon_SwSh.png/96px-Dragon_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={dragonIcone}></img>
   ),
-  dark: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/d/d5/Dark_icon_SwSh.png/96px-Dark_icon_SwSh.png"
-    ></img>
-  ),
+  dark: <img alt="pokemon-type" className="pokemon-type" src={darkIcone}></img>,
   fairy: (
-    <img
-      alt="pokemon-type"
-      className="pokemon-type"
-      src="https://archives.bulbagarden.net/media/upload/thumb/c/c6/Fairy_icon_SwSh.png/96px-Fairy_icon_SwSh.png"
-    ></img>
+    <img alt="pokemon-type" className="pokemon-type" src={fairyIcone}></img>
   ),
 };
