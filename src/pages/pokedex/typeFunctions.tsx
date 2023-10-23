@@ -29,48 +29,26 @@ export const setCssClass = (pokemonData) =>
   `container--grid-tile pokemon-type-${getTypeOfPokemon(pokemonData?.types)}`;
 
 const typesIcon = {
-  grass: (
-    <img alt="pokemon-type" className="pokemon-type" src={grassIcone}></img>
-  ),
-  fire: <img alt="pokemon-type" className="pokemon-type" src={fireIcone}></img>,
-  water: (
-    <img alt="pokemon-type" className="pokemon-type" src={waterIcone}></img>
-  ),
-  bug: <img alt="pokemon-type" className="pokemon-type" src={bugIcone}></img>,
-  psychic: (
-    <img alt="pokemon-type" className="pokemon-type" src={psyhicIcone}></img>
-  ),
-  ghost: (
-    <img alt="pokemon-type" className="pokemon-type" src={ghostIcone}></img>
-  ),
-  fly: (
-    <img alt="pokemon-type" className="pokemon-type" src={flyingIcone}></img>
-  ),
-  rock: <img alt="pokemon-type" className="pokemon-type" src={rockIcone}></img>,
+  grass: <img alt="grass" className="pokemon-type" src={grassIcone}></img>,
+  fire: <img alt="fire" className="pokemon-type" src={fireIcone}></img>,
+  water: <img alt="water" className="pokemon-type" src={waterIcone}></img>,
+  bug: <img alt="bug" className="pokemon-type" src={bugIcone}></img>,
+  psychic: <img alt="psychic" className="pokemon-type" src={psyhicIcone}></img>,
+  ghost: <img alt="ghost" className="pokemon-type" src={ghostIcone}></img>,
+  fly: <img alt="flying" className="pokemon-type" src={flyingIcone}></img>,
+  rock: <img alt="rock" className="pokemon-type" src={rockIcone}></img>,
   electric: (
-    <img alt="pokemon-type" className="pokemon-type" src={electricIcone}></img>
+    <img alt="electric" className="pokemon-type" src={electricIcone}></img>
   ),
-  normal: (
-    <img alt="pokemon-type" className="pokemon-type" src={normalIcone}></img>
-  ),
+  normal: <img alt="normal" className="pokemon-type" src={normalIcone}></img>,
   fighting: (
-    <img alt="pokemon-type" className="pokemon-type" src={fightIcone}></img>
+    <img alt="fighting" className="pokemon-type" src={fightIcone}></img>
   ),
-  poison: (
-    <img alt="pokemon-type" className="pokemon-type" src={poisonIcone}></img>
-  ),
-  ground: (
-    <img alt="pokemon-type" className="pokemon-type" src={groundIcone}></img>
-  ),
-  steel: (
-    <img alt="pokemon-type" className="pokemon-type" src={steelIcone}></img>
-  ),
-  ice: <img alt="pokemon-type" className="pokemon-type" src={iceIcone}></img>,
-  dragon: (
-    <img alt="pokemon-type" className="pokemon-type" src={dragonIcone}></img>
-  ),
-  dark: <img alt="pokemon-type" className="pokemon-type" src={darkIcone}></img>,
-  fairy: (
-    <img alt="pokemon-type" className="pokemon-type" src={fairyIcone}></img>
-  ),
+  poison: <img alt="poison" className="pokemon-type" src={poisonIcone}></img>,
+  ground: <img alt="ground" className="pokemon-type" src={groundIcone}></img>,
+  steel: <img alt="steel" className="pokemon-type" src={steelIcone}></img>,
+  ice: <img alt="ice" className="pokemon-type" src={iceIcone}></img>,
+  dragon: <img alt="dragon" className="pokemon-type" src={dragonIcone}></img>,
+  dark: <img alt="dark" className="pokemon-type" src={darkIcone}></img>,
+  fairy: <img alt="fairy" className="pokemon-type" src={fairyIcone}></img>,
 };
