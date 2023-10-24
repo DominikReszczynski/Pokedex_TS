@@ -5,7 +5,9 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <ul className="footer_ul">
-        <li className="footer_li">KONTAKT</li>
+        <li className="footer_li">
+          <Link to="/contact">KONTAKT</Link>
+        </li>
         <li className="footer_li">|</li>
         <li className="footer_li">
           <Link to="/">
