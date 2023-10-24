@@ -1,0 +1,8 @@
+.site_conteiner{
+    display: flex;
+    justify-content: center;
+    .contact_form{
+        display: flex;
+        flex-direction: column;
+    }
+}

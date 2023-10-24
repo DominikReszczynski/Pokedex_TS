@@ -5,6 +5,7 @@ import { Home } from "./pages/home/home";
 import { About } from "./pages/about/about";
 import { Games } from "./pages/games/games";
 import { Pokedex } from "./pages/pokedex/pokedex";
+import { Contact } from "./pages/contact/contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/games" element={<Games />} />
             <Route path="/pokedex" element={<Pokedex />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
