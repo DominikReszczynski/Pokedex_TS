@@ -13,7 +13,17 @@ export interface PostInterface {
 
 export const Home = () => {
   const [posts, setPosts] = useState<PostInterface[]>(data);
-
+  setPosts([
+    ...posts,
+    {
+      thumbImg: "string",
+      title: "string",
+      content: "string",
+      topics1: "string",
+      topics2: "string",
+      topics3: "string",
+    },
+  ]);
   return (
     <div className="site_conteiner ">
       {posts.length === 0 ? <p>Brak postów do wyświetlenia</p> : <PostThumbs />}
