@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { PostThumbs } from "./PostThumbs/PostThumbs";
 import { data } from "./PostThumbs/data";
 
@@ -12,10 +12,10 @@ export interface PostInterface {
 }
 
 export const Home = () => {
-  // const [posts, setPosts] = useState<PostInterface[]>(data);
+  const [posts] = useState<PostInterface[]>(data);
   return (
     <div className="site_conteiner ">
-      {data.length === 0 ? <p>Brak postów do wyświetlenia</p> : <PostThumbs />}
+      {posts.length === 0 ? <p>Brak postów do wyświetlenia</p> : <PostThumbs />}
     </div>
   );
 };
