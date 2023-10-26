@@ -12,7 +12,7 @@ export interface PostInterface {
 }
 
 export const Home = () => {
-  const [posts, setPosts] = useState<PostInterface[]>(data);
+  const [posts] = useState<PostInterface[]>(data);
 
   return (
     <div className="site_conteiner ">
