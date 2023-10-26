@@ -10,9 +10,9 @@ export const Footer = () => {
         </li>
         <li className="footer_li">|</li>
         <li className="footer_li">
-          <Link to="/">
+          <a href="https://www.figma.com/file/GOqvXex3UWUjmmV7Wmyq2i/Untitled?type=design&node-id=0-1&mode=design&t=BUfOWef2motmaByP-0">
             <img src={Logo} alt="" />
-          </Link>
+          </a>
         </li>
         <li className="footer_li">|</li>
         <li className="footer_li">TWÓRCY</li>

@@ -7,7 +7,7 @@ export function Pokedex() {
   const [getPokemons, setPokemons] = useState([]);
   const [getIsLoading, setIsLoading] = useState(true);
   const [setError] = useState(null);
-  const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=200";
+  const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=250";
 
   useEffect(() => {
     fetch(BASE_POKEMON_API_URL)
