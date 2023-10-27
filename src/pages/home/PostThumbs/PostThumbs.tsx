@@ -1,9 +1,10 @@
 import { data } from "./data";
+import { Link } from "react-router-dom";
 import './PostThumbs.scss'
 
-export const PostThumbs = () => {
+export const PostThumbs = ({}) => {
   return (
-    <div>
+    <main className="site_conteiner ">
       {data.map((post, index) => {
         return (
           <div key={index} className="post__thumb--wrapper">
@@ -19,15 +20,13 @@ export const PostThumbs = () => {
                   <span>{post.topics1}</span>
                   <span>{post.topics2}</span>
                   <span>{post.topics3}</span>
-                </p>
-                <a href="#" className="post__link">
-                  CZYTAJ DALEJ...
-                </a>
+                </p>               
+                <Link to={`/posts/${index}`} className="post__link">CZYTAJ DALEJ...</Link>
               </div>
             </div>
           </div>
         );
       })}
-    </div>
+    </main>
   );
 };

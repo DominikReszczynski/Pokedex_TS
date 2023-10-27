@@ -7,8 +7,12 @@ import { About } from "./pages/about/about";
 import { Games } from "./pages/games/games";
 import { Pokedex } from "./pages/pokedex/pokedex";
 import { Contact } from "./pages/contact/contact";
+
+import { SinglePost } from "./pages/posts/SinglePost";
+
 import { useEffect, useState } from "react";
 import { PokemonInfo } from "./pages/pokedex/pokemonInfo";
+
 
 function App() {
   const [getPokemons, setPokemons] = useState([]);
@@ -65,6 +69,7 @@ function App() {
             })}
 
             <Route path="/contact" element={<Contact />} />
+            <Route path="/posts/:index" element={<SinglePost />} />
           </Route>
         </Routes>
       </BrowserRouter>
