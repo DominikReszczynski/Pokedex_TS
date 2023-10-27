@@ -3,12 +3,6 @@ import { useState } from "react";
 import { getIconTypeOfPokemon } from "./typeFunctions";
 import { setCssClass } from "./typeFunctions";
 export const OnePokemon = ({ pokemon }) => {
-  let totatlPokemonStats = 0;
-  console.log(pokemon);
-  pokemon.stats.map((stat) => {
-    console.log(typeof stat.base_stat);
-    totatlPokemonStats += stat.base_stat;
-  });
   return (
     <>
       {" "}
@@ -24,7 +18,7 @@ export const OnePokemon = ({ pokemon }) => {
         />
         <div id="pokemon_info">
           <h3>{pokemon?.name?.replace(/-.*/, "")}</h3>
-          <h3>Stats {totatlPokemonStats}</h3>
+          {/* <h3>Stats {totatlPokemonStats}</h3> */}
         </div>
       </div>
     </>
