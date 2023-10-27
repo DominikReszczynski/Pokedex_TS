@@ -25,24 +25,26 @@ function App() {
       })
       .then((data) => {
         const pokemonList = data.results;
-        const pokemonPromises = pokemonList.map((pokemon) =>
-          fetch(pokemon.url).then((response) => response.json())
-        );
-        Promise.all(pokemonPromises)
-          .then((pokemonsData) => {
-            setPokemons(pokemonsData);
-            setIsLoading(false);
-          })
-          .catch((error) => {
-            setError(error?.message);
-            // setIsLoading(false);
-          });
+
+        const pokemonPromises = pokemonList.map((pokemon) => {
+          setPokemons((prevPokemons) => [...prevPokemons, pokemon.name]);
+        });
+        // Promise.all(pokemonPromises)
+        //   .then((pokemonsData) => {
+        //     setPokemons(pokemonsData);
+        //     setIsLoading(false);
+        //   })
+        // .catch((error) => {
+        //   setError(error?.message);
+        //   // setIsLoading(false);
+        // });
       })
       .catch((error) => {
         setError(error?.message);
         setIsLoading(false);
       });
   }, []);
+  console.log(getPokemons);
   return (
     <>
       <BrowserRouter>
@@ -51,15 +53,12 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/games" element={<Games />} />
-            <Route
-              path="/pokedex"
-              element={<Pokedex getPokemons={getPokemons} />}
-            />
+            <Route path="/pokedex" element={<Pokedex />} />
             {getPokemons.map((pokemon) => {
               return (
                 <Route
-                  key={pokemon.name}
-                  path={"/pokedex/" + pokemon.name}
+                  key={pokemon}
+                  path={"/pokedex/" + pokemon}
                   element={<PokemonInfo pokemon={pokemon} />}
                 />
               );
