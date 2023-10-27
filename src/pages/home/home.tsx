@@ -8,15 +8,15 @@ export interface PostInterface {
   content: string;
   topics1?: string;
   topics2?: string;
-  topics3?: string;
+  topics3?: string; 
 }
 
 export const Home = () => {
   const [posts] = useState<PostInterface[]>(data);
 
   return (
-    <div className="site_conteiner ">
+    <main className="site_conteiner ">
       {posts.length === 0 ? <p>Brak postów do wyświetlenia</p> : <PostThumbs />}
-    </div>
+    </main>
   );
 };
