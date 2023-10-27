@@ -9,6 +9,9 @@
     padding: 10px;
     justify-content: center;
 }
+.container--grid-wrapper a{
+  color: white;
+}
   .container--grid-tile {
     font-weight: bold;
     text-transform: capitalize;
