@@ -6,6 +6,7 @@ import { About } from "./pages/about/about";
 import { Games } from "./pages/games/games";
 import { Pokedex } from "./pages/pokedex/pokedex";
 import { Contact } from "./pages/contact/contact";
+import { SinglePost } from "./pages/posts/SinglePost";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/games" element={<Games />} />
             <Route path="/pokedex" element={<Pokedex />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/posts/:index" element={<SinglePost />} />
           </Route>
         </Routes>
       </BrowserRouter>
