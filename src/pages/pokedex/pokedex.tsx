@@ -12,7 +12,9 @@ export function Pokedex() {
   const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1015";
 
   useEffect(() => {
-    fetch(BASE_POKEMON_API_URL)
+    fetch(BASE_POKEMON_API_URL, {
+      cache: 'force-cache'
+    }) 
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

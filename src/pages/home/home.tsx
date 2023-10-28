@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { PostThumbs } from "./PostThumbs/PostThumbs";
-import { data } from "./PostThumbs/data";
+import { postData } from "../posts/postData";
 
 export interface PostInterface {
   thumbImg: string;
   title: string;
   content: string;
-  topics1?: string;
-  topics2?: string;
-  topics3?: string; 
+  topics1: string;
+  topics2: string;
+  topics3: string; 
 }
 
 export const Home = () => {
-  const [posts] = useState<PostInterface[]>(data);
+  const [posts] = useState<PostInterface[]>(postData);
 
   return (
     <main className="site_conteiner ">
