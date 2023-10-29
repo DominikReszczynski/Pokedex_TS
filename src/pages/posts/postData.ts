@@ -24,17 +24,7 @@ export interface ExtendedPostInterface extends PostInterface {
 }
 
 const db = getFirestore(app);
-const data: {
-  topics3: string;
-  topics2: string;
-  topics1: string;
-  secondSubTitleContent?: string;
-  secondSubTitle?: string;
-  content: string;
-  subTitleMain: string;
-  title: string;
-  thumbImg: string;
-}[] = [];
+const data: ExtendedPostInterface[] = [];
 const querySnapshot = await getDocs(collection(db, "postData"));
 querySnapshot.forEach((post) => {
   const postData = post.data();
