@@ -1,21 +1,7 @@
 import { PostInterface } from "../home/home";
 
-import { initializeApp } from "firebase/app";
+import { app } from "../../firebase/firebaseConfig";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
-// import { getAnalytics } from "firebase/analytics";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBPGwa76HPqg0qCKsOpwXYHj8I_O4TjE8c",
-  authDomain: "pokedexts.firebaseapp.com",
-  projectId: "pokedexts",
-  storageBucket: "pokedexts.appspot.com",
-  messagingSenderId: "188336105780",
-  appId: "1:188336105780:web:727dd64a1eeb256408dd61",
-  measurementId: "G-0Z31G9WHB7",
-};
-
-const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 
 export interface ExtendedPostInterface extends PostInterface {
   subTitleMain: string;

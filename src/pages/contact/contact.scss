@@ -1,8 +1,69 @@
-.site_conteiner{
+.site_conteiner {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  .contact__wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    .contact_form{
-        display: flex;
-        flex-direction: column;
+    align-items: center;
+    color: var(--main_font_color);
+    width: 900px;
+    background-color: var(--main_white_colour);
+    border: 8px solid var(--main_orange_colour);
+    border-radius: 20px;
+
+    .contact__title {
+        font-size: 38px;
+        line-height: 47px;
+        color: var(--main_orange_colour);
+        margin-top: 20px;
+        margin-bottom: 15px;
     }
+    p {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 32px;
+    }
+
+    .contact_form {
+      font-family: "Righteous";
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      text-transform: uppercase;
+      width: 432px;
+
+      input,
+      textarea {
+        font-size: 20px;
+        height: 45px;
+        background-color: transparent;
+        border: 2px solid var(--main_orange_colour);
+        border-radius: 10px;
+        padding: 0px 13px;
+      }
+      textarea {
+        min-width: 402px;
+        max-width: 402px;
+        height: 220px;
+        padding: 10px 13px;
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        color: var(--main_white_colour);
+        width: 226px;
+        height: 44px;
+        background-color: var(--main_button_color);
+        border: 2px solid var(--main_dark_blue_colour);
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-top: 8px;
+        margin-bottom: 217px;
+      }
+    }
+  }
 }
