@@ -8,11 +8,17 @@ export interface PostInterface {
   content: string;
   topics1: string;
   topics2: string;
-  topics3: string; 
+  topics3: string;
 }
 
 export const Home = () => {
-  const [posts] = useState<PostInterface[]>(postData);
+  const [posts, setPosts] = useState<PostInterface[]>([]);
+
+  // to jest do zmiany... 
+
+  setTimeout(() => {
+    setPosts(postData);
+  }, 400);
 
   return (
     <main className="site_conteiner ">
