@@ -1,23 +1,20 @@
 // @ts-nocheck
 import "./App.css";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./layout/layout";
 import { Home } from "./pages/home/home";
 import { About } from "./pages/about/about";
 import { Games } from "./pages/games/games";
 import { Pokedex } from "./pages/pokedex/pokedex";
-import { Contact } from "./pages/contact/contact";
-
-import { SinglePost } from "./pages/posts/SinglePost";
-
-import { useEffect, useState } from "react";
 import { PokemonInfo } from "./pages/pokedex/pokemonInfo";
-
+import { Contact } from "./pages/contact/contact";
+import { SinglePost } from "./pages/posts/SinglePost";
 
 function App() {
   const [getPokemons, setPokemons] = useState([]);
   const [getError, setError] = useState("");
-  const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=1015";
+  const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon?limit=2000";
 
   useEffect(() => {
     fetch(BASE_POKEMON_API_URL)
@@ -48,7 +45,7 @@ function App() {
         setIsLoading(false);
       });
   }, []);
-  console.log(getPokemons);
+  console.log('getPokemons: ',getPokemons);
   return (
     <>
       <BrowserRouter>
@@ -57,7 +54,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/games" element={<Games />} />
-            <Route path="/pokedex" element={<Pokedex />} />
+            <Route path="/pokedex" element={<Pokedex getPokemonsName={getPokemons}/>} />
             {getPokemons.map((pokemon) => {
               return (
                 <Route
