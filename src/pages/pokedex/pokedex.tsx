@@ -93,8 +93,7 @@ export function Pokedex({ getPokemonsName }) {
         {getPokemons.map((pokemon) => (
           <Link
             key={pokemon.name}
-            to={`/pokedex/${pokemon.name}`}
-            key={pokemon.name}
+            to={`/pokedex/${pokemon.name}`}           
           >
             <OnePokemon pokemon={pokemon} />
           </Link>
