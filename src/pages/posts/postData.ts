@@ -2,20 +2,14 @@ import { PostInterface } from "../home/home";
 import { app } from "../../firebase/firebaseConfig";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-export interface ExtendedPostInterface extends PostInterface {
-  subTitleMain: string;
-  secondSubTitle?: string;
-  secondSubTitleContent?: string;
-}
-
 const db = getFirestore(app);
-const data: ExtendedPostInterface[] = [];
+const data: PostInterface[] = [];
 
   const getData = async () => {     
     const querySnapshot = await getDocs(collection(db, "postData"));
     querySnapshot.forEach((post) => {
       const postData = post.data();
-      const fetchpost: ExtendedPostInterface = {
+      const fetchpost: PostInterface = {
         thumbImg: postData.thumbImg,
         title: postData.title,
         subTitleMain: postData.subTitleMain,
