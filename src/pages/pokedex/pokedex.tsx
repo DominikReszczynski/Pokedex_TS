@@ -88,12 +88,18 @@ export function Pokedex({ getPokemonsName }) {
             placeholder="...wpisz nazwę szukanego pokemona"
             onChange={find}
           />
+          <button type="submit">
+            <i class="fa fa-search">&#x1F50E;</i>
+          </button>
         </div>
       </div>
       <div className="pokedex_page_index">
         {pokemonsInAvaryGenaration.map((numberOfPokemons, index) => {
           return (
-            <button onClick={() => setCurrentPage(index + 1)}>
+            <button
+              disabled={currentPage === index + 1}
+              onClick={() => setCurrentPage(index + 1)}
+            >
               {index + 1}
             </button>
           );
@@ -108,9 +114,16 @@ export function Pokedex({ getPokemonsName }) {
         ))}
       </div>
       <div className="pokedex_page_index">
-        <button onClick={prevPae}>Poprzednie</button>
+        <button disabled={currentPage === 0} onClick={prevPae}>
+          ←
+        </button>
         <div className="pokedex_page_number"></div>
-        <button onClick={nextPage}>Następne</button>
+        <button
+          disabled={currentPage === pokemonsInAvaryGenaration.length}
+          onClick={nextPage}
+        >
+          →
+        </button>
       </div>
     </div>
   );
