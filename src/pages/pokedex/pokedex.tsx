@@ -77,27 +77,33 @@ export function Pokedex({ getPokemonsName }) {
   };
 
   return (
-    <div>
+    <div className="site_conteiner ">
       <div className="pokedex__header">
         <div className="pokedex_input">
-          <input type="text" placeholder="...wpisz nazwę szukanego pokemona" onChange={find} />
+          <input
+            type="text"
+            placeholder="...wpisz nazwę szukanego pokemona"
+            onChange={find}
+          />
         </div>
-        <div className="pokedex_page_index">
-          <button onClick={prevPae}>Poprzednie</button>
-          <div className="pokedex_page_number"></div>
-          <button onClick={nextPage}>Następne</button>
-        </div>
+      </div>
+      <div className="pokedex_page_index">
+        <button onClick={prevPae}>Poprzednie</button>
+        <div className="pokedex_page_number"></div>
+        <button onClick={nextPage}>Następne</button>
       </div>
       <div className="container--grid-wrapper">
         <h1>{getIsLoading && <div className="loader" />}</h1>
         {getPokemons.map((pokemon) => (
-          <Link
-            key={pokemon.name}
-            to={`/pokedex/${pokemon.name}`}           
-          >
+          <Link key={pokemon.name} to={`/pokedex/${pokemon.name}`}>
             <OnePokemon pokemon={pokemon} />
           </Link>
         ))}
+      </div>
+      <div className="pokedex_page_index">
+        <button onClick={prevPae}>Poprzednie</button>
+        <div className="pokedex_page_number"></div>
+        <button onClick={nextPage}>Następne</button>
       </div>
     </div>
   );
