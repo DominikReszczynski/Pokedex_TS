@@ -4,13 +4,13 @@ import "./pokemonInfo.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const PokemonInfo = ({ pokemon }) => {
-  const BASE_POKEMON_API_URL = `https://pokeapi.co/api/v2/pokemon/ditto`;
+export const PokemonInfo = ({ pokemonName }) => {
+  const ONE_POKEMON_API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
   const [getPokemons, setPokemons] = useState([]);
   const [getIsLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+    fetch(ONE_POKEMON_API_URL)
       .then((response) => response.json())
       .then((data) => setPokemons(data))
       .catch((error) => console.error("Error:", error));
@@ -21,15 +21,11 @@ export const PokemonInfo = ({ pokemon }) => {
       <div className="pokemon_info_conteiner">
         <img
           src={
-            getPokemons.sprites?.versions.generation -
-            vii.ultra -
-            sun -
-            ultra -
-            moon.front_default
+            getPokemons.sprites?.versions['generation-vii']['ultra-sun-ultra-moon'].front_default
           }
-          alt=""
+          alt={`pokemon ${pokemonName}`}
         />
-        <p>{pokemon}</p>
+        <p>{pokemonName}</p>
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
       </div>

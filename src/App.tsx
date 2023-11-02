@@ -7,7 +7,7 @@ import { Home } from "./pages/home/home";
 import { About } from "./pages/about/about";
 import { Games } from "./pages/games/games";
 import { Pokedex } from "./pages/pokedex/pokedex";
-import { PokemonInfo } from "./pages/pokedex/pokemonInfo";
+import { PokemonInfo } from "./pages/pokedex/pokemonInfo/pokemonInfo";
 import { Contact } from "./pages/contact/contact";
 import { SinglePost } from "./pages/posts/SinglePost";
 
@@ -45,7 +45,7 @@ function App() {
         setIsLoading(false);
       });
   }, []);
-  console.log('getPokemons: ',getPokemons);
+  console.log('getPokemons: ', getPokemons);
   return (
     <>
       <BrowserRouter>
@@ -54,13 +54,13 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/games" element={<Games />} />
-            <Route path="/pokedex" element={<Pokedex getPokemonsName={getPokemons}/>} />
+            <Route path="/pokedex" element={<Pokedex getPokemonsName={getPokemons} />} />
             {getPokemons.map((pokemon) => {
               return (
                 <Route
                   key={pokemon}
                   path={"/pokedex/" + pokemon}
-                  element={<PokemonInfo pokemon={pokemon} />}
+                  element={<PokemonInfo pokemonName={pokemon} />}
                 />
               );
             })}
