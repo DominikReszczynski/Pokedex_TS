@@ -4,8 +4,8 @@ import "./pokemonInfo.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const PokemonInfo = ({ pokemonName }) => {
-  const ONE_POKEMON_API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+export const PokemonInfo = ({ pokemonName, pokemonIndex }) => {
+  const ONE_POKEMON_API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemonIndex}`;
   const [getPokemons, setPokemons] = useState([]);
   const [getIsLoading, setIsLoading] = useState(true);
 

@@ -55,12 +55,12 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/games" element={<Games />} />
             <Route path="/pokedex" element={<Pokedex getPokemonsName={getPokemons} />} />
-            {getPokemons.map((pokemon) => {
+            {getPokemons.map((pokemon, index) => {
               return (
                 <Route
                   key={pokemon}
                   path={"/pokedex/" + pokemon}
-                  element={<PokemonInfo pokemonName={pokemon} />}
+                  element={<PokemonInfo pokemonName={pokemon} pokemonIndex={index + 1} />}
                 />
               );
             })}
