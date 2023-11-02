@@ -1,11 +1,11 @@
-import { data } from "./data";
+import { postData } from "../../posts/postData";
 import { Link } from "react-router-dom";
 import './PostThumbs.scss'
 
 export const PostThumbs = ({}) => {
   return (
     <main className="site_conteiner ">
-      {data.map((post, index) => {
+      {postData.map((post, index) => {
         return (
           <div key={index} className="post__thumb--wrapper">
             <div className="thumb__img">
