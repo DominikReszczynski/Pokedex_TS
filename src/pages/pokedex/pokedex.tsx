@@ -129,6 +129,7 @@ export function Pokedex({ getPokemonsName }) {
         <h1>{getIsLoading && <div className="loader" />}</h1>
         {getPokemons.map((pokemon) => (
           <Link key={pokemon.name} to={`/pokedex/${pokemon.name}`}>
+            {console.log(pokemon)}
             <OnePokemon pokemon={pokemon} />
           </Link>
         ))}
