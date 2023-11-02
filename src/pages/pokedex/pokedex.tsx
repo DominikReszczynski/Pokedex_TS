@@ -7,18 +7,21 @@ import { OnePokemon } from "./onePokemon";
 import { Link } from "react-router-dom";
 
 export function Pokedex({ getPokemonsName }) {
+  const pokemonsInAvaryGenaration = [0, 151, 251, 386, 493, 649, 721, 809, 905];
+  const pokemonsOnPage = [151, 100, 135, 107, 156, 72, 88, 96, 103];
   const [getPokemons, setPokemons] = useState([]);
   const [getIsLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pokemonsOnPage, setPokemonsOnPage] = useState(40);
   const [setError] = useState(null);
   const BASE_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon";
-  const pokedexOffset = (currentPage - 1) * pokemonsOnPage;
+  const pokedexOffset = pokemonsInAvaryGenaration[currentPage - 1];
   const navigate = useNavigate();
 
   useEffect(() => {
     fetch(
-      `${BASE_POKEMON_API_URL}?limit=${pokemonsOnPage}&offset=${pokedexOffset}`,
+      `${BASE_POKEMON_API_URL}?limit=${
+        pokemonsOnPage[currentPage - 1]
+      }&offset=${pokedexOffset}`,
       {
         cache: "force-cache",
       }
@@ -88,9 +91,13 @@ export function Pokedex({ getPokemonsName }) {
         </div>
       </div>
       <div className="pokedex_page_index">
-        <button onClick={prevPae}>Poprzednie</button>
-        <div className="pokedex_page_number"></div>
-        <button onClick={nextPage}>Następne</button>
+        {pokemonsInAvaryGenaration.map((numberOfPokemons, index) => {
+          return (
+            <button onClick={() => setCurrentPage(index + 1)}>
+              {index + 1}
+            </button>
+          );
+        })}
       </div>
       <div className="container--grid-wrapper">
         <h1>{getIsLoading && <div className="loader" />}</h1>
