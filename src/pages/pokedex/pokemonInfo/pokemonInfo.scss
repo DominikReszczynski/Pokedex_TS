@@ -1,0 +1,8 @@
+.pokemon_info_conteiner{
+    background-color: var(--main_white_colour);
+    width: 900px;
+    min-height: calc(100vh - 50px - 70px);
+    margin-top: 15px;
+    border: 2px solid var(--main_orange_colour);
+    border-radius: 2%;
+}
