@@ -50,6 +50,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
           />
         </div>
         <p>{pokemonName}</p>
+
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
       </div>
