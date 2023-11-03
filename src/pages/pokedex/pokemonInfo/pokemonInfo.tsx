@@ -4,8 +4,9 @@ import "./pokemonInfo.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const PokemonInfo = ({ pokemonName, pokemonIndex }) => {
-  const ONE_POKEMON_API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemonIndex}`;
+export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
+  const [getPokemonIndex, setPokemonIndex] = useState(pokemonIndex);
+  const ONE_POKEMON_API_URL = `https://pokeapi.co/api/v2/pokemon/${getPokemonIndex}`;
   const [getPokemons, setPokemons] = useState([]);
   const [getIsLoading, setIsLoading] = useState(true);
 
@@ -14,18 +15,42 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex }) => {
       .then((response) => response.json())
       .then((data) => setPokemons(data))
       .catch((error) => console.error("Error:", error));
-  }, []);
-  console.log(getPokemons.num);
+  }, [getPokemonIndex]);
+  // console.log(getPokemons);
+
+  const prevPokemon = () => {
+    if (getPokemonIndex >= 0) setPokemonIndex(getPokemonIndex - 1);
+  };
+
+  const nextPokemon = () => {
+    if (getPokemonIndex <= getPokeLength.length)
+      setPokemonIndex(getPokemonIndex + 1);
+  };
+
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
-        <img
-          src={
-            getPokemons.sprites?.versions['generation-vii']['ultra-sun-ultra-moon'].front_default
-          }
-          alt={`pokemon ${pokemonName}`}
-        />
-        <p>{pokemonName} {getPokemons.id}</p>
+        <div className="pokemon_naviation">
+          <button className="prev" onClick={() => prevPokemon()}>
+            ←
+          </button>
+          <button className="next" onClick={() => nextPokemon()}>
+            →
+          </button>
+        </div>
+
+        <div>
+          <img
+            src={
+              getPokemons.sprites?.versions["generation-vii"][
+                "ultra-sun-ultra-moon"
+              ].front_default
+            }
+            alt={`pokemon ${pokemonName}`}
+          />
+        </div>
+        <p>{pokemonName}</p>
+
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
       </div>
