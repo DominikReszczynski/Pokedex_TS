@@ -15,7 +15,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex }) => {
       .then((data) => setPokemons(data))
       .catch((error) => console.error("Error:", error));
   }, []);
-  console.log(getPokemons);
+  console.log(getPokemons.num);
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
@@ -25,7 +25,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex }) => {
           }
           alt={`pokemon ${pokemonName}`}
         />
-        <p>{pokemonName}</p>
+        <p>{pokemonName} {getPokemons.id}</p>
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
       </div>
