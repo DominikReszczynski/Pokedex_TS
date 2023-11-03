@@ -57,27 +57,6 @@ export const Contact = () => {
     .catch(function (error) {
       console.error('Error: ', error)
     })
-
-
-    //  fetch("http://localhost:5000/send_email", {
-    //   mode: 'cors',
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },      
-    //   body: JSON.stringify(formData),
-    // })
-    //   .then((response) => {
-    //     if(!response.ok){
-    //       throw new Error("Network response was not ok");
-    //     }
-    //     return response.json()        
-        
-    //   })
-    //   .then((data) => {
-    //     console.log("data: ", data);
-    //   })
-    //   .catch((error) => console.error("Error: ", error));
   };
 
   const clearFormFields = () => {
