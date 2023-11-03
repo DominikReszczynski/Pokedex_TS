@@ -1,6 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { app } from "../../firebase/firebaseConfig";
+import axios from 'axios'
 import "./contact.scss";
 
 interface FormData {
@@ -18,8 +17,6 @@ export const Contact = () => {
   const [emailIsFiled, setEmailFiled] = useState<boolean>(false);
   const [messageIsFiled, setMessageFiled] = useState<boolean>(false);
 
-  const db = getFirestore(app);
-
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -34,7 +31,7 @@ export const Contact = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     sendForm();
-    clearFormFields()
+    clearFormFields();
   };
 
   const whetherNameIsEmpty = () => {
@@ -48,13 +45,39 @@ export const Contact = () => {
       : setEmailFiled(false);
   };
 
-  const sendForm = async () => {
-    try {
-      const docRef = await addDoc(collection(db, "contactFormData"), formData);
-      console.log("Form send with ID: ", docRef.id);
-    } catch (error) {
-      console.error("Error sendin form: ", error);
-    }
+  const sendForm = () => {
+    axios.post("http://localhost:5000/send_email", {
+      email: formData.email,
+      userName: formData.name,
+      message: formData.message
+    })
+    .then(function (response) {
+      console.log('Response: ', response)
+    })
+    .catch(function (error) {
+      console.error('Error: ', error)
+    })
+
+
+    //  fetch("http://localhost:5000/send_email", {
+    //   mode: 'cors',
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },      
+    //   body: JSON.stringify(formData),
+    // })
+    //   .then((response) => {
+    //     if(!response.ok){
+    //       throw new Error("Network response was not ok");
+    //     }
+    //     return response.json()        
+        
+    //   })
+    //   .then((data) => {
+    //     console.log("data: ", data);
+    //   })
+    //   .catch((error) => console.error("Error: ", error));
   };
 
   const clearFormFields = () => {
@@ -63,6 +86,9 @@ export const Contact = () => {
       email: "",
       message: "",
     });
+    setNameFiled(false)
+    setEmailFiled(false)
+    setMessageFiled(false)
   };
 
   console.log(nameIsFiled, emailIsFiled, messageIsFiled);
@@ -70,44 +96,45 @@ export const Contact = () => {
     <main className="site_conteiner">
       <div className="contact__wrapper">
         <h1 className="contact__title">! SKONTAKTUJ SIĘ Z NAMI !</h1>
-        <p>Napisz na maila:<br/>
-        kontakt@pokelab.pl
+        <p>
+          Napisz na maila:
+          <br />
+          kontakt@pokelab.pl
         </p>
         <p>lub</p>
         <p>Wypełnij formularz</p>
-      <form className="contact_form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Imię:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <label htmlFor="email">Adres e-mail:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <label htmlFor="message">Wiadomość:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-        />
-        <button
-          disabled={!emailIsFiled && !nameIsFiled && !messageIsFiled}
-          type="submit"
-        >
-          Wyślij
-        </button>
-      </form>
+        <form className="contact_form" onSubmit={handleSubmit}>
+          <label htmlFor="name">Imię:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <label htmlFor="email">Adres e-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <label htmlFor="message">Wiadomość:</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+          />
+          <button
+            disabled={!emailIsFiled && !nameIsFiled && !messageIsFiled}
+            type="submit"
+          >
+            Wyślij
+          </button>
+        </form>
       </div>
-      
     </main>
   );
 };
