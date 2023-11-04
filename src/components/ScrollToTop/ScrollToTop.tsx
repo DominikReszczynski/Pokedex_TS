@@ -3,7 +3,7 @@ import scrollToTopIcon from "../../assets/scrollToTopIcon.png";
 import "./ScrollToTop.scss";
 
 export const ScrollToTop = () => {
-  const [isPaeScrollDown, setIsPageScrollDown] = useState<boolean>(false);
+  const [isPageScrollDown, setIsPageScrollDown] = useState<boolean>(false);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -21,7 +21,7 @@ window.scrollTo({
 
   return (
     <>
-      {isPaeScrollDown ? (
+      {isPageScrollDown ? (
         <div className="scroll_to_top_icon">
           <img src={scrollToTopIcon} alt="scroll to top icon" onClick={handleScroll}/>
         </div>
