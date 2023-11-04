@@ -1,8 +1,26 @@
 .pokemon_info_conteiner{
+    color: var(--main_orange_colour);
     background-color: var(--main_white_colour);
     width: 900px;
-    min-height: calc(100vh - 50px - 70px);
+    min-height: calc(100vh - 50px - 100px);
     margin-top: 15px;
     border: 2px solid var(--main_orange_colour);
-    border-radius: 2%;
+    border-radius: 40px;
+    .pokemon_naviation {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 20px;
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            height: 40px;
+            font-size: 20px;
+            color: var(--main_orange_colour);            
+            background-color: var(--main_white_colour);
+            border: 2px solid var(--main_orange_colour);   
+            border-radius: 40px;         
+        }
+    }
 }
