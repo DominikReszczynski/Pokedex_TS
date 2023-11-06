@@ -15,6 +15,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
       .then((response) => response.json())
       .then((data) => setPokemons(data))
       .catch((error) => console.error("Error:", error));
+
   }, [getPokemonIndex]);
   // console.log(getPokemons);
 
@@ -26,7 +27,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
     if (getPokemonIndex <= getPokeLength.length)
       setPokemonIndex(getPokemonIndex + 1);
   };
-
+  console.log(getPokeLength)
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
@@ -42,9 +43,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
         <div>
           <img
             src={
-              getPokemons.sprites?.versions["generation-vii"][
-                "ultra-sun-ultra-moon"
-              ].front_default
+              getPokemons.sprites.front_default
             }
             alt={`pokemon ${pokemonName}`}
           />
