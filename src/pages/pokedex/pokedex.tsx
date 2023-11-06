@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export function Pokedex({ getPokemonsName }) {
   const pokemonsInAvaryGenaration = [0, 151, 251, 386, 493, 649, 721, 809, 905];
-  const pokemonsOnPage = [151, 100, 135, 107, 156, 72, 88, 96, 103];
+  const pokemonsOnPage = [151, 100, 135, 107, 156, 72, 88, 96, 105];
   const [getPokemons, setPokemons] = useState([]);
   const [pokemonName, setPokemonName] = useState('');
   const [getIsLoading, setIsLoading] = useState(true);
@@ -20,8 +20,7 @@ export function Pokedex({ getPokemonsName }) {
 
   useEffect(() => {
     fetch(
-      `${BASE_POKEMON_API_URL}?limit=${
-        pokemonsOnPage[currentPage - 1]
+      `${BASE_POKEMON_API_URL}?limit=${pokemonsOnPage[currentPage - 1]
       }&offset=${pokedexOffset}`,
       {
         cache: "force-cache",
@@ -66,14 +65,14 @@ export function Pokedex({ getPokemonsName }) {
 
   // console.log('pages: ',pokedexPages)
 
-  const onChange = (e) => {    
+  const onChange = (e) => {
     setPokemonName(e.target.value)
   };
-  const findPokemon = (pokemon) => {    
-    setPokemonName(pokemon)   
+  const findPokemon = (pokemon) => {
+    setPokemonName(pokemon)
   };
 
-  const searchPokemon = () => {    
+  const searchPokemon = () => {
     const result = getPokemonsName.find((pokemon) => pokemon === pokemonName)
     if (result) navigate(`/pokedex/${pokemonName}`)
   }
@@ -92,24 +91,25 @@ export function Pokedex({ getPokemonsName }) {
         <div className="pokedex_input">
           <div className="search_bar">
             <input
-            type="text"
-            placeholder="...wpisz nazwę szukanego pokemona"
-            value={pokemonName}
-            onChange={onChange}
-          />
-          <button type="submit" onClick={() => searchPokemon()}>
-            <i className="fa fa-search">&#x1F50E;</i>
-          </button>
-          </div>          
+              type="text"
+              placeholder="...wpisz nazwę szukanego pokemona"
+              value={pokemonName}
+              onChange={onChange}
+            />
+            <button type="submit" onClick={() => searchPokemon()}>
+              <i className="fa fa-search">&#x1F50E;</i>
+            </button>
+          </div>
           <div className="pokedex_dropdown">
-            {getPokemonsName.filter((pokemon) => 
-            {const searchName = pokemon.toLowerCase();
-            const pokoemonName = pokemonName.toLowerCase()          
-          
-            return pokemonName && searchName.includes(pokemonName) && pokemonName !== searchName})
-          .map((pokemon, index) => (
-          <div className="dropdown_row" key={index} onClick={() => findPokemon(pokemon)}>{pokemon}</div>
-        ))}</div>
+            {getPokemonsName.filter((pokemon) => {
+              const searchName = pokemon.toLowerCase();
+              const pokoemonName = pokemonName.toLowerCase()
+
+              return pokemonName && searchName.includes(pokemonName) && pokemonName !== searchName
+            })
+              .map((pokemon, index) => (
+                <div className="dropdown_row" key={index} onClick={() => findPokemon(pokemon)}>{pokemon}</div>
+              ))}</div>
         </div>
       </div>
       <div className="pokedex_page_index">

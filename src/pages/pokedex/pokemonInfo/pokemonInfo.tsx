@@ -17,14 +17,25 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
       .then((response) => response.json())
       .then((data) => setPokemons(data))
       .catch((error) => console.error("Error:", error));
-    fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex + 1}`)
-      .then((response) => response.json())
-      .then((data) => setNextPokemons(data))
-      .catch((error) => console.error("Error:", error));
-    fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex - 1}`)
-      .then((response) => response.json())
-      .then((data) => setPrevPokemons(data))
-      .catch((error) => console.error("Error:", error));
+    if (getPokemonIndex !== 1010) {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex + 1}`)
+        .then((response) => response.json())
+        .then((data) => setNextPokemons(data))
+        .catch((error) => console.error("Error:", error));
+    }
+    else {
+      setNextPokemons(getPokemons)
+    }
+    if (getPokemonIndex !== 1) {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex - 1}`)
+        .then((response) => response.json())
+        .then((data) => setPrevPokemons(data))
+        .catch((error) => console.error("Error:", error));
+    }
+    else {
+      setPrevPokemons(getPokemons)
+    }
+
   }, [getPokemonIndex]);
   // console.log(getPokemons);
 
@@ -39,22 +50,26 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
   console.log(getNextPokemons)
   return (
     <div className="site_conteiner">
-      <div className="pokemon_info_conteiner">
-        <div className="pokemon_naviation">
-          <button className="prev" onClick={() => prevPokemon()}>
-            <h5>{getPrevPokemons.name}</h5>
-            <img src={getPrevPokemons.sprites.front_default} alt={getPrevPokemons.name} />
-          </button>
-          <button className="next" onClick={() => nextPokemon()}>
-            <img src={getNextPokemons.sprites.front_default} alt={getNextPokemons.name} />
-            <h5>{getNextPokemons.name}</h5>
-          </button>
+      {getPrevPokemons.sprites && (<div className="pokemon_info_conteiner">
+        <div className="pokemon_navigation">
+          <Link key={getPrevPokemons?.name} to={`/pokedex/${getPrevPokemons?.name}`}>
+            <button disabled={getPokemonIndex === 1} className="prev" onClick={() => prevPokemon()}>
+              <h5>{getPrevPokemons?.name}</h5>
+              <img src={getPrevPokemons?.sprites?.front_default} alt={getPrevPokemons?.name} />
+            </button>
+          </Link>
+          <Link key={getNextPokemons?.name} to={`/pokedex/${getNextPokemons?.name}`}>
+            <button className="next" onClick={() => nextPokemon()}>
+              <img src={getNextPokemons?.sprites?.front_default} alt={getNextPokemons?.name} />
+              <h5>{getNextPokemons?.name}</h5>
+            </button>
+          </Link>
         </div>
 
         <div>
           <img
             src={
-              getPokemons.sprites?.front_default
+              getPokemons?.sprites?.front_default
             }
             alt={`pokemon ${pokemonName}`}
           />
@@ -63,7 +78,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
 
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
-      </div>
+      </div>)}
     </div>
   );
 };
