@@ -37,7 +37,6 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
     }
 
   }, [getPokemonIndex]);
-  // console.log(getPokemons);
 
   const prevPokemon = () => {
     if (getPokemonIndex >= 0) setPokemonIndex(getPokemonIndex - 1);
