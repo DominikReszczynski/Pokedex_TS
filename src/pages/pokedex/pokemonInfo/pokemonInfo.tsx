@@ -24,7 +24,10 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
         .catch((error) => console.error("Error:", error));
     }
     else {
-      setNextPokemons(getPokemons)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex - 1}`)
+        .then((response) => response.json())
+        .then((data) => setPrevPokemons(data))
+        .catch((error) => console.error("Error:", error));
     }
     if (getPokemonIndex !== 1) {
       fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex - 1}`)
@@ -33,7 +36,10 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
         .catch((error) => console.error("Error:", error));
     }
     else {
-      setPrevPokemons(getPokemons)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex + 1}`)
+        .then((response) => response.json())
+        .then((data) => setPrevPokemons(data))
+        .catch((error) => console.error("Error:", error));
     }
 
   }, [getPokemonIndex]);
