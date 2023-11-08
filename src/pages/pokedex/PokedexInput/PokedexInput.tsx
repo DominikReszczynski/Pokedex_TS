@@ -8,8 +8,6 @@ export const PokedexInput = ({getPokemonsName}: {getPokemonsName: string[]}) => 
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPokemonName(e.target.value)
-        console.log("e: ", e)
-        console.log("e.typeof: ", typeof(e))
       };
       const findPokemon = (pokemon: string) => {
         setPokemonName(pokemon)
