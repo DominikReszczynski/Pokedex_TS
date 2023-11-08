@@ -10,6 +10,9 @@
     display: flex;
     justify-content: space-between;
     margin: 10px 20px;
+    .disable{
+      display: none;
+    }
     a {
       display: flex;
       justify-content: center;

@@ -60,7 +60,7 @@ function App() {
                 <Route
                   key={pokemon}
                   path={"/pokedex/" + pokemon}
-                  element={<PokemonInfo getPokeLength={getPokemons} pokemonName={pokemon} pokemonIndex={index + 1}/>}
+                  element={<PokemonInfo key={index} getPokeLength={getPokemons} pokemonName={pokemon} pokemonIndex={index + 1} />}
                 />
               );
             })}

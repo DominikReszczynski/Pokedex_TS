@@ -52,18 +52,18 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
     if (getPokemonIndex <= getPokeLength.length)
       setPokemonIndex(getPokemonIndex + 1);
   };
-  console.log(getNextPokemons)
+  console.log(getPokemonIndex)
   return (
     <div className="site_conteiner">
-      {getPrevPokemons.sprites && (<div className="pokemon_info_conteiner">
+      <div className="pokemon_info_conteiner">
         <div className="pokemon_navigation">
-          <Link key={getPrevPokemons?.name} to={`/pokedex/${getPrevPokemons?.name}`}>
+          <Link className={getPokemonIndex === 1 ? 'disable' : ''} key={getPrevPokemons?.name} to={`/pokedex/${getPrevPokemons?.name}`}>
             <button disabled={getPokemonIndex === 1} className="prev" onClick={() => prevPokemon()}>
               <h5>{getPrevPokemons?.name}</h5>
               <img src={getPrevPokemons?.sprites?.front_default} alt={getPrevPokemons?.name} />
             </button>
           </Link>
-          <Link key={getNextPokemons?.name} to={`/pokedex/${getNextPokemons?.name}`}>
+          <Link className={getPokemonIndex === 1010 ? 'disable' : ''} key={getNextPokemons?.name} to={`/pokedex/${getNextPokemons?.name}`}>
             <button className="next" onClick={() => nextPokemon()}>
               <img src={getNextPokemons?.sprites?.front_default} alt={getNextPokemons?.name} />
               <h5>{getNextPokemons?.name}</h5>
@@ -83,7 +83,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
 
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
-      </div>)}
+      </div>
     </div>
   );
 };
