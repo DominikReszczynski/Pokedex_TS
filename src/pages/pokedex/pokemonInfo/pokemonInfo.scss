@@ -39,4 +39,12 @@
       }
     }
   }
+  .pokemon_navigation_first {
+    @extend .pokemon_navigation;
+    justify-content: flex-end;    
+  }
+  .pokemon_navigation_last {
+    @extend .pokemon_navigation;
+    justify-content: flex-start;    
+  }
 }

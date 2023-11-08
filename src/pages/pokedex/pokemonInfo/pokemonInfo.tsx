@@ -56,7 +56,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
-        <div className="pokemon_navigation">
+        <div className={`pokemon_navigation${getPokemonIndex === 1 ? '_first' : getPokemonIndex === 1010 ? '_last' : ''} `}>
           <Link className={getPokemonIndex === 1 ? 'disable' : ''} key={getPrevPokemons?.name} to={`/pokedex/${getPrevPokemons?.name}`}>
             <button disabled={getPokemonIndex === 1} className="prev" onClick={() => prevPokemon()}>
               <h5>{getPrevPokemons?.name}</h5>
