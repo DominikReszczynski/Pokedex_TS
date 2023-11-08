@@ -3,9 +3,10 @@ import Hamburger from "../../assets/Hamburger_icon.svg.png";
 import Logo from "../../assets/PokeLab_Logo.png";
 import "./header.css";
 import { useState } from "react";
+
 export const Header = () => {
   const [activePage, setActivePage] = useState(0);
-  console.log(activePage);
+  // console.log(activePage);
   return (
     <header>
       <section className="top-nav">

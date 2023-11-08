@@ -46,7 +46,7 @@ function App() {
         setIsLoading(false);
       });
   }, []);
-  console.log('getPokemons: ', getPokemons);
+  // console.log('getPokemons: : ', getPokemons);
   return (
     <>
       <BrowserRouter>
@@ -60,8 +60,8 @@ function App() {
               return (
                 <Route
                   key={pokemon}
-                  path={"/pokedex/" + pokemon}
-                  element={<PokemonInfo key={index} getPokeLength={getPokemons} pokemonName={pokemon} pokemonIndex={index + 1} />}
+                  path={`/pokedex/${pokemon}`}
+                  element={<PokemonInfo getPokeLength={getPokemons.length} pokemonName={pokemon} pokemonIndex={index + 1} />}
                 />
               );
             })}
