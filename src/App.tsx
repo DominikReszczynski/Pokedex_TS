@@ -10,6 +10,7 @@ import { Pokedex } from "./pages/pokedex/pokedex";
 import { PokemonInfo } from "./pages/pokedex/pokemonInfo/pokemonInfo";
 import { Contact } from "./pages/contact/contact";
 import { SinglePost } from "./pages/posts/SinglePost";
+import { Creators } from "./pages/creators/creators";
 
 function App() {
   const [getPokemons, setPokemons] = useState([]);
@@ -66,6 +67,7 @@ function App() {
             })}
 
             <Route path="/contact" element={<Contact />} />
+            <Route path="/creators" element={<Creators />} />
             <Route path="/posts/:index" element={<SinglePost />} />
           </Route>
         </Routes>

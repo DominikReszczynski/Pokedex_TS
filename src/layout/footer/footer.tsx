@@ -15,7 +15,9 @@ export const Footer = () => {
           </a>
         </li>
         <li className="footer_li">|</li>
-        <li className="footer_li">TWÓRCY</li>
+        <li className="footer_li">
+          <Link to='/creators'>TWÓRCY</Link>
+        </li>
       </ul>
     </footer>
   );

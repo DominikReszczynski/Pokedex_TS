@@ -1,0 +1,36 @@
+.site_conteiner {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  .creators__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main_font_color);
+    width: 900px;
+    background-color: var(--main_white_colour);
+    border: 8px solid var(--main_orange_colour);
+    border-radius: 20px;
+    padding-bottom: 50px;
+
+    .creators__title {
+        font-size: 38px;
+        line-height: 47px;
+        color: var(--main_orange_colour);
+        margin-top: 45px;
+        margin-bottom: 41px;
+        img {
+          height: 29px;
+        }       
+    }
+    div {
+      font-size: 24px;
+      margin-bottom: 31px;
+      a {
+        color: var(--main_font_color);
+      }
+    }
+     
+  }
+}

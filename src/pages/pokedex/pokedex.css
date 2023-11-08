@@ -11,6 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .pokedex_input .search_bar {
   display: flex;
@@ -41,12 +42,15 @@
 }
 .pokedex_dropdown {
   position: absolute;
-  top: 120px;
+  overflow: hidden;  
+  top: 70px;      
   width: 424px;
+  height: fit-content;
+  max-height: 60vh;
   color: var(--main_orange_colour);
   background-color: var(--main_white_colour);
   border: 2px solid var(--main_orange_colour);
-  border-radius: 25px;
+  border-radius: 25px;  
 }
 .pokedex_dropdown:empty {
   border: none;

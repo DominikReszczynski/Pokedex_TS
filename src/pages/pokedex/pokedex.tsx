@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./pokedex.css";
 
 import { OnePokemon } from "./onePokemon";
+import { PokedexInput } from "./PokedexInput/PokedexInput";
 import { Link } from "react-router-dom";
 
 export function Pokedex({ getPokemonsName }) {
@@ -65,18 +66,6 @@ export function Pokedex({ getPokemonsName }) {
 
   // console.log('pages: ',pokedexPages)
 
-  const onChange = (e) => {
-    setPokemonName(e.target.value)
-  };
-  const findPokemon = (pokemon) => {
-    setPokemonName(pokemon)
-  };
-
-  const searchPokemon = () => {
-    const result = getPokemonsName.find((pokemon) => pokemon === pokemonName)
-    if (result) navigate(`/pokedex/${pokemonName}`)
-  }
-
   const nextPage = () => {
     currentPage >= 1 ? setCurrentPage(currentPage + 1) : null;
   };
@@ -88,29 +77,7 @@ export function Pokedex({ getPokemonsName }) {
   return (
     <div className="site_conteiner ">
       <div className="pokedex__header">
-        <div className="pokedex_input">
-          <div className="search_bar">
-            <input
-              type="text"
-              placeholder="...wpisz nazwę szukanego pokemona"
-              value={pokemonName}
-              onChange={onChange}
-            />
-            <button type="submit" onClick={() => searchPokemon()}>
-              <i className="fa fa-search">&#x1F50E;</i>
-            </button>
-          </div>
-          <div className="pokedex_dropdown">
-            {getPokemonsName.filter((pokemon) => {
-              const searchName = pokemon.toLowerCase();
-              const pokoemonName = pokemonName.toLowerCase()
-
-              return pokemonName && searchName.includes(pokemonName) && pokemonName !== searchName
-            })
-              .map((pokemon, index) => (
-                <div className="dropdown_row" key={index} onClick={() => findPokemon(pokemon)}>{pokemon}</div>
-              ))}</div>
-        </div>
+        <PokedexInput getPokemonsName={getPokemonsName}/>              
       </div>
       <div className="pokedex_page_index">
         {pokemonsInAvaryGenaration.map((numberOfPokemons, index) => {
