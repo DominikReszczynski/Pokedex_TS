@@ -1,8 +1,8 @@
 // @ts-nocheck
-import { Link } from "react-router-dom";
-import "./pokemonInfo.scss";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
+import { PokemoCard } from "./PokemonCard/PokemonCard";
+import "./pokemonInfo.scss";
 
 export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
   const [getPokemonIndex, setPokemonIndex] = useState(pokemonIndex);
@@ -52,18 +52,18 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
     if (getPokemonIndex <= getPokeLength.length)
       setPokemonIndex(getPokemonIndex + 1);
   };
-  console.log(getPokemonIndex)
+  // console.log(getPokemonIndex)
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
         <div className={`pokemon_navigation${getPokemonIndex === 1 ? '_first' : getPokemonIndex === 1010 ? '_last' : ''} `}>
-          <Link className={getPokemonIndex === 1 ? 'disable' : ''} key={getPrevPokemons?.name} to={`/pokedex/${getPrevPokemons?.name}`}>
+          <Link className={getPokemonIndex === 1 ? 'disable' : ''} to={`/pokedex/${getPrevPokemons?.name}`}>
             <button disabled={getPokemonIndex === 1} className="prev" onClick={() => prevPokemon()}>
               <h5>{getPrevPokemons?.name}</h5>
               <img src={getPrevPokemons?.sprites?.front_default} alt={getPrevPokemons?.name} />
             </button>
           </Link>
-          <Link className={getPokemonIndex === 1010 ? 'disable' : ''} key={getNextPokemons?.name} to={`/pokedex/${getNextPokemons?.name}`}>
+          <Link className={getPokemonIndex === 1010 ? 'disable' : ''} to={`/pokedex/${getNextPokemons?.name}`}>
             <button className="next" onClick={() => nextPokemon()}>
               <img src={getNextPokemons?.sprites?.front_default} alt={getNextPokemons?.name} />
               <h5>{getNextPokemons?.name}</h5>
@@ -71,15 +71,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
           </Link>
         </div>
 
-        <div>
-          <img
-            src={
-              getPokemons?.sprites?.front_default
-            }
-            alt={`pokemon ${pokemonName}`}
-          />
-        </div>
-        <p>{pokemonName}</p>
+        <PokemoCard getPokemons={getPokemons} pokemonName={pokemonName}/>     
 
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
