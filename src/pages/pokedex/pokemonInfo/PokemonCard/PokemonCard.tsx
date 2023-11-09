@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { useEffect, useState } from "react";
+import { StatsBar } from './pokemonStatsBar/statsBar.jsx'
 import "./PokemonCard.scss";
 
 export const PokemoCard = ({
@@ -10,15 +11,6 @@ export const PokemoCard = ({
   pokemonName: string;
 }) => {
   const [pokemon, setPokemon] = useState<any | null>(null);
-
-  // const pokemonData = () => {
-  //   setPokemon(getPokemon);
-  // };
-
-  // useEffect(() => {
-  //   pokemonData();
-  // });
-
   // -------vvvvvvv------ kod z dol ale ma za duzo danych o atakach i nie ma za bardzo jak wykozystac na ta chwile
 
   //   <div>Pokémon moves:
@@ -41,11 +33,11 @@ export const PokemoCard = ({
             alt={`pokemon ${pokemonName}`}
           />
           <p className="pokemon_name">{pokemonName}</p>
-          <div>
+          <ol>
             {pokemon?.stats.map((pokemonStat, index) => (
-              <p key={index}>{pokemonStat.stat.name}: {pokemonStat.base_stat}</p>
+              <li key={index}>{pokemonStat.stat.name}: <StatsBar stats={pokemonStat.base_stat} /></li>
             ))}
-          </div>
+          </ol>
           <div className="pokemon_card">
             <div className="pokemon_base_info">
               <div className="info_title">
