@@ -23,9 +23,9 @@ export function Pokedex({ getPokemonsName }) {
     fetch(
       `${BASE_POKEMON_API_URL}?limit=${pokemonsOnPage[currentPage - 1]
       }&offset=${pokedexOffset}`,
-      {
-        cache: "force-cache",
-      }
+      // {
+      //   cache: "force-cache",
+      // }
     )
       .then((response) => {
         if (!response.ok) {
@@ -40,7 +40,7 @@ export function Pokedex({ getPokemonsName }) {
         );
         Promise.all(pokemonPromises)
           .then((pokemonsData) => {
-            console.log("pokemonsData: ", pokemonsData);
+            // console.log("pokemonsData: ", pokemonsData);
             setPokemons(pokemonsData);
             setIsLoading(false);
           })
@@ -70,7 +70,7 @@ export function Pokedex({ getPokemonsName }) {
     currentPage >= 1 ? setCurrentPage(currentPage + 1) : null;
   };
 
-  const prevPae = () => {
+  const prevPage = () => {
     currentPage <= 1 ? null : setCurrentPage(currentPage - 1);
   };
 
@@ -95,14 +95,14 @@ export function Pokedex({ getPokemonsName }) {
       <div className="container--grid-wrapper">
         <h1>{getIsLoading && <div className="loader" />}</h1>
         {getPokemons.map((pokemon) => (
-          <Link key={pokemon.name} to={`/pokedex/${pokemon.name}`}>
-            {console.log(pokemon)}
+          
+          <Link key={pokemon.name} to={`/pokedex/${pokemon.name}`}>            
             <OnePokemon pokemon={pokemon} />
           </Link>
         ))}
       </div>
       <div className="pokedex_page_index">
-        <button disabled={currentPage === 0} onClick={prevPae}>
+        <button disabled={currentPage === 0} onClick={prevPage}>
           ←
         </button>
         <div className="pokedex_page_number"></div>

@@ -49,10 +49,12 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
   };
 
   const nextPokemon = () => {
-    if (getPokemonIndex <= getPokeLength.length)
+    if (getPokemonIndex <= getPokeLength)
       setPokemonIndex(getPokemonIndex + 1);
   };
-  // console.log(getPokemonIndex)
+
+  // console.log('pokedex getPokemon: ', getPokemons)
+  
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
@@ -71,7 +73,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
           </Link>
         </div>
 
-        <PokemoCard getPokemons={getPokemons} pokemonName={pokemonName}/>     
+        <PokemoCard getPokemon={getPokemons} pokemonName={pokemonName}/>     
 
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
