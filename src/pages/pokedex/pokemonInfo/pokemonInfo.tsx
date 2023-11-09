@@ -13,10 +13,6 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
   const [getIsLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(ONE_POKEMON_API_URL)
-      .then((response) => response.json())
-      .then((data) => setPokemons(data))
-      .catch((error) => console.error("Error:", error));
     if (getPokemonIndex !== 1010) {
       fetch(`https://pokeapi.co/api/v2/pokemon/${getPokemonIndex + 1}`)
         .then((response) => response.json())
@@ -53,8 +49,9 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
       setPokemonIndex(getPokemonIndex + 1);
   };
 
-  // console.log('pokedex getPokemon: ', getPokemons)
-  
+  console.log('pokedex getPokemon: ', getPokemons)
+
+
   return (
     <div className="site_conteiner">
       <div className="pokemon_info_conteiner">
@@ -73,7 +70,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
           </Link>
         </div>
 
-        <PokemoCard getPokemon={getPokemons} pokemonName={pokemonName}/>     
+        {getPokemons && <PokemoCard ONE_POKEMON_API_URL={ONE_POKEMON_API_URL} pokemonName={pokemonName} />}
 
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
