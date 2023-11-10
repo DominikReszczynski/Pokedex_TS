@@ -70,7 +70,7 @@ export const PokemonInfo = ({ pokemonName, pokemonIndex, getPokeLength }) => {
           </Link>
         </div>
 
-        {getPokemons && <PokemoCard ONE_POKEMON_API_URL={ONE_POKEMON_API_URL} pokemonName={pokemonName} />}
+        {getPokemons && <PokemoCard ONE_POKEMON_API_URL={ONE_POKEMON_API_URL} pokemonName={pokemonName} getPokemonIndex={getPokemonIndex}/>}
 
         <br />
         <Link to={"/pokedex/"}>Powrot do pokedexa</Link>
